@@ -12,6 +12,31 @@ interface BeforeInstallPromptEvent extends Event {
 }
 
 const DISMISSED_KEY = "pwa-install-dismissed";
+// INOTUM: la X rimanda il banner di 24 ore invece di farlo riapparire alla
+// prossima navigazione; se l'app viene installata, il banner sparisce per sempre.
+const SNOOZE_KEY = "pwa-install-snoozed-at";
+const SNOOZE_MS = 24 * 60 * 60 * 1000;
+
+function isSnoozed(): boolean {
+  try {
+    const at = Number(localStorage.getItem(SNOOZE_KEY) || 0);
+    return at > 0 && Date.now() - at < SNOOZE_MS;
+  } catch {
+    return false;
+  }
+}
+
+function isRunningInstalled(): boolean {
+  try {
+    return (
+      window.matchMedia("(display-mode: standalone)").matches ||
+      // iOS Safari
+      (navigator as unknown as { standalone?: boolean }).standalone === true
+    );
+  } catch {
+    return false;
+  }
+}
 export const PWA_INSTALL_PROMPT_VISIBILITY_EVENT =
   "bulwark:pwa-install-prompt-visibility";
 
@@ -32,17 +57,35 @@ export function PWAInstallPrompt() {
 
   useEffect(() => {
     if (localStorage.getItem(DISMISSED_KEY)) return;
+    // INOTUM: mai proporre l'installazione dentro l'app gia' installata.
+    if (isRunningInstalled()) return;
 
     const handler = (e: Event) => {
       e.preventDefault();
+      // INOTUM: rispetta lo snooze di 24h impostato dalla X.
+      if (isSnoozed()) return;
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowPrompt(true);
     };
 
+    // INOTUM: installazione completata (da banner nostro o dal menu del
+    // browser) -> non riproporre mai piu'.
+    const installedHandler = () => {
+      try {
+        localStorage.setItem(DISMISSED_KEY, "1");
+      } catch {
+        /* best-effort */
+      }
+      setDeferredPrompt(null);
+      setShowPrompt(false);
+    };
+
     window.addEventListener("beforeinstallprompt", handler);
+    window.addEventListener("appinstalled", installedHandler);
 
     return () => {
       window.removeEventListener("beforeinstallprompt", handler);
+      window.removeEventListener("appinstalled", installedHandler);
     };
   }, []);
 
@@ -72,6 +115,12 @@ export function PWAInstallPrompt() {
   };
 
   const handleDismiss = () => {
+    // INOTUM: la X = "non ora": riprova tra 24 ore, non alla prossima pagina.
+    try {
+      localStorage.setItem(SNOOZE_KEY, String(Date.now()));
+    } catch {
+      /* best-effort */
+    }
     setShowPrompt(false);
   };
 
