@@ -486,11 +486,12 @@ export function NavigationRail({
       {(() => {
         const logoUrl = withBasePath(resolvedTheme === 'dark' ? (appLogoDarkUrl || appLogoLightUrl) : (appLogoLightUrl || appLogoDarkUrl));
         return logoUrl ? (
-          <div className="flex items-center justify-center py-3 px-1">
+          <div className="flex items-center justify-center py-2 px-1">
+            {/* INOTUM: logo ad almeno 40px come da brand (era 32px) */}
             <img
               src={logoUrl}
               alt=""
-              className="w-8 h-8 object-contain"
+              className="w-10 h-10 object-contain"
             />
           </div>
         ) : null;

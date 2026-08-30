@@ -21,7 +21,9 @@ const SVG_NS = 'http://www.w3.org/2000/svg';
 // The fill is the Bulwark brand red darkened to ~40% lightness: dark enough to
 // read as a distinct badge on the brand icon itself (with the ring between
 // them), and ~6.9:1 against the white digits.
-const BADGE_FILL = '#af1d3f';
+// INOTUM: badge nel blu del brand (contrasto ~5:1 con le cifre bianche),
+// al posto del rosso Bulwark.
+const BADGE_FILL = '#1766c0';
 const BADGE_RING = '#ffffff';
 const BADGE_TEXT_FILL = '#ffffff';
 const BADGE_FONT = "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif";
@@ -119,6 +121,20 @@ export function renderBadgedFavicon(baseSvgSource: string, count: number): strin
     }
 
     sanitiseSvg(doc);
+
+    // INOTUM: alcuni tool di export scrivono data URI con MIME errato
+    // ("data:img/png" invece di "data:image/png"). Il file diretto viene
+    // perdonato dai browser, ma dentro il favicon data: annidato il raster
+    // sparisce e resta solo il badge. Normalizziamo qui, cosi' vale anche
+    // per i loghi caricati in futuro dagli admin.
+    doc.querySelectorAll('image').forEach((el) => {
+      for (const name of ['href', 'xlink:href']) {
+        const v = el.getAttribute(name);
+        if (v && v.startsWith('data:img/')) {
+          el.setAttribute(name, v.replace(/^data:img\//, 'data:image/'));
+        }
+      }
+    });
 
     // The base declares "1000pt"; point units in a favicon are unreliable.
     // Unitless 16 with the viewBox retained lets the browser rasterise cleanly

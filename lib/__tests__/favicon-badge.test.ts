@@ -3,10 +3,10 @@ import { formatBadgeCount, renderBadgedFavicon } from '@/lib/favicon-badge';
 
 const BASE_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000pt" height="1000pt"><defs><clipPath id="_clip1"><rect width="1000" height="1000"/></clipPath></defs><g clip-path="url(#_clip1)"><rect width="1000" height="1000" fill="#123456"/></g></svg>`;
 
-// The renderer's published colours: the white keyline halo under a deep-rose
+// The renderer's published colours: the white keyline halo under a brand-blue
 // fill rect, with white digits on top.
 const RING = '#ffffff';
-const FILL = '#af1d3f';
+const FILL = '#1766c0';
 
 function decode(dataUrl: string): string {
   return decodeURIComponent(dataUrl.replace('data:image/svg+xml,', ''));
@@ -23,7 +23,7 @@ function rectByFill(svg: string, fill: string): Rect {
   return { x, y, w, h, rx };
 }
 
-/** The badge fill rect: the deep-rose rounded rect the digits sit on. */
+/** The badge fill rect: the brand-blue rounded rect the digits sit on. */
 function badge(svg: string): Rect {
   return rectByFill(svg, FILL);
 }
@@ -124,7 +124,7 @@ describe('renderBadgedFavicon', () => {
     expect(svg).not.toContain('1000pt');
   });
 
-  it('draws a deep-rose badge with white digits inside a white keyline halo', () => {
+  it('draws a brand-blue badge with white digits inside a white keyline halo', () => {
     // The keyline pair is the contrast guarantee: against dark or saturated
     // artwork the white ring separates the badge; against pale artwork the ring
     // vanishes but the deep fill is the edge. Digit contrast (white on the
