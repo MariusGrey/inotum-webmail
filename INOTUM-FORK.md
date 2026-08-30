@@ -3,7 +3,11 @@
 Fork di [bulwarkmail/webmail](https://github.com/bulwarkmail/webmail) (AGPL-3.0), la webmail
 JMAP usata da **Inotum Mail**. Base: **v1.9.2**, la stessa versione in produzione.
 
-## Stato: fork di riserva, nessuna modifica funzionale
+## Stato: IN PRODUZIONE dal 30/08 (immagine inotum-webmail:1.9.2-inotum.1)
+
+Motivo del passaggio: l'immagine ufficiale pinnata era piu' vecchia di main e non
+conteneva le app sidebar dell'operatore (#931), richieste dal progetto. Nessuna
+modifica al codice: build di main. Le prossime modifiche funzionali partiranno da qui.
 
 In produzione gira ancora l'immagine ufficiale. Il fork esiste per:
 
