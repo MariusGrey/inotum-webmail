@@ -42,7 +42,7 @@ git remote add upstream https://github.com/bulwarkmail/webmail.git
 git fetch upstream && git rebase upstream/main
 ```
 
-## 1.9.2-inotum.5 (2026-08-31)
+## 1.9.2-inotum.6 (2026-08-31)
 
 Evoluzioni Inotum: le prime funzioni vere del fork, non solo branding.
 
