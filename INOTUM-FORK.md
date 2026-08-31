@@ -3,36 +3,35 @@
 Fork di [bulwarkmail/webmail](https://github.com/bulwarkmail/webmail) (AGPL-3.0), la webmail
 JMAP usata da **Inotum Mail**. Base: **v1.9.2**, la stessa versione in produzione.
 
-## Stato: IN PRODUZIONE dal 30/08 (immagine inotum-webmail:1.9.2-inotum.1)
+## Stato: IN PRODUZIONE (immagine `inotum-webmail:1.9.2-inotum.3`)
 
-Motivo del passaggio: l'immagine ufficiale pinnata era piu' vecchia di main e non
-conteneva le app sidebar dell'operatore (#931), richieste dal progetto. Nessuna
-modifica al codice: build di main. Le prossime modifiche funzionali partiranno da qui.
+Base: `bulwarkmail/webmail` main (v1.9.2 + #931). Prima motivazione del fork: l'immagine
+ufficiale pinnata era piu' vecchia del sorgente e non conteneva le app sidebar
+dell'operatore (#931), necessarie al progetto.
 
-In produzione gira ancora l'immagine ufficiale. Il fork esiste per:
+## Modifiche rispetto a upstream (branch `inotum-brand`)
 
-1. avere una base pubblica pronta quando serviranno modifiche non ottenibili da configurazione;
-2. rispettare l'AGPL nel momento in cui distribuiremo una versione modificata.
+| File | Modifica |
+|---|---|
+| `components/pwa-install-prompt.tsx` | la X rimanda il banner "installa app" di 24 ore (prima riappariva a ogni navigazione); `appinstalled` + display-mode standalone lo nascondono per sempre ad app installata |
+| `lib/favicon-badge.ts` | badge non-letti nel blu brand `#1766c0` (contrasto ~5:1) al posto del rosso; normalizzazione difensiva dei data URI `data:img/*` malformati nei loghi (altrimenti il favicon composto perde il raster) |
+| `lib/__tests__/favicon-badge.test.ts` | aspettative aggiornate al nuovo colore |
+| `components/layout/navigation-rail.tsx` | logo nel rail a 40px (era 32) |
 
-**Non serve forkare per il branding**: l'immagine ufficiale lo copre già via variabili
-d'ambiente (`APP_NAME`, `APP_LOGO_LIGHT_URL`, `APP_LOGO_DARK_URL`, favicon) e, per il
-multi-dominio, via `DOMAIN_BRANDING` — un JSON che assegna nome e logo diversi a ogni
-hostname (`webmail.inotum.io`, `webmail.inotum.it`, domini dei clienti…).
+Il branding resta via env (`APP_NAME`, `APP_LOGO_*`, `DOMAIN_BRANDING`); le app sidebar
+per tutti gli utenti via `policy.json` (`defaultSidebarApps`).
 
-## Modifiche previste quando il fork entrerà in produzione
+## Prossime evoluzioni candidate
 
-- **App della barra laterale predefinite**: oggi ogni utente deve aggiungersele da sé
-  (es. la pagina "Sincronizza Google Calendar"). Serve un default a livello di istanza.
-- **Campo "link calendario"**: mostrare all'utente il proprio feed ICS
-  (`https://mail.inotum.io/calfeed/<token>.ics`) direttamente nelle impostazioni,
-  invece di inviarglielo via email.
-- **Endpoint JMAP per dominio**: far puntare `webmail.<dominio>` al proprio
-  `mail.<dominio>` invece che sempre a `mail.inotum.io` (white-label completo).
+- link del feed calendario (`/calfeed/<token>.ics`) nelle impostazioni utente
+- endpoint JMAP per dominio (`webmail.<dominio>` -> `mail.<dominio>`)
+- sync per-account delle app sidebar aggiunte dall'utente (oggi localStorage)
+- relay push self-hosted
 
 ## Build
 
 ```bash
-docker build -t ghcr.io/mariusgrey/inotum-webmail:1.9.2 .
+docker build -t inotum-webmail:1.9.2-inotum.N .
 ```
 Poi aggiornare l'immagine in `compose.yaml` sul server, con tag fissato (mai `latest`).
 
