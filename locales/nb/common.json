@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "Standardapper",
-    "description": "Velg om e-post- og kalenderlenker skal åpnes i Bulwark. Teknisk sett registrerer Bulwark seg som protokollbehandler for mailto:- og webcal:-lenker.",
+    "description": "Velg om e-post- og kalenderlenker skal åpnes i Inotum. Teknisk sett registrerer Inotum seg som protokollbehandler for mailto:- og webcal:-lenker.",
     "unsupported": "Denne nettleseren eller tilkoblingen støtter ikke manuell registrering av protokollbehandlere. Det kan hende du likevel kan velge den installerte PWA-en i innstillingene for nettleseren eller operativsystemet.",
     "mailto_label": "E-postlenker",
-    "mailto_description": "Åpne mailto:-lenker i Bulwark med et forhåndsutfylt meldingsvindu.",
+    "mailto_description": "Åpne mailto:-lenker i Inotum med et forhåndsutfylt meldingsvindu.",
     "protocol_open_mode_label": "Når mailto:- og webcal:-lenker åpnes",
-    "protocol_open_mode_description": "Velg om Bulwark skal åpne mailto:- og webcal:-lenker i en ny fane eller bruke en økt som allerede er åpen. Alternativet for aktiv økt krever tillatelse til varsler. Hvis nettleseren hindrer Bulwark i å få fokus, kan du klikke på et varsel for å vise vinduet.",
+    "protocol_open_mode_description": "Velg om Inotum skal åpne mailto:- og webcal:-lenker i en ny fane eller bruke en økt som allerede er åpen. Alternativet for aktiv økt krever tillatelse til varsler. Hvis nettleseren hindrer Inotum i å få fokus, kan du klikke på et varsel for å vise vinduet.",
     "protocol_open_mode_active_session": "Åpne i aktiv økt hvis mulig",
     "protocol_open_mode_new_tab": "Åpne alltid en ny fane",
-    "focus_notification_title": "Åpne Bulwark",
-    "focus_notification_body": "Lenken ble åpnet i Bulwark. Klikk for å vise vinduet.",
+    "focus_notification_title": "Åpne Inotum",
+    "focus_notification_body": "Lenken ble åpnet i Inotum. Klikk for å vise vinduet.",
     "webcal_label": "Kalenderlenker",
-    "webcal_description": "Åpne webcal:-lenker i Bulwark med en forhåndsutfylt dialog for kalenderabonnement.",
+    "webcal_description": "Åpne webcal:-lenker i Inotum med en forhåndsutfylt dialog for kalenderabonnement.",
     "register_mailto": "Registrer e-postprogram",
     "register_webcal": "Registrer kalenderprogram",
     "mailto_registered": "Forespørsel om registrering av e-postprogram er sendt",
@@ -166,7 +166,7 @@
     "registration_failed": "Registrering av protokollbehandler mislyktes",
     "opening_mailto": "Åpner meldingsvinduet...",
     "opening_webcal": "Åpner kalenderen...",
-    "browser_note": "Nettleseren eller operativsystemet kan be deg bekrefte dette. Det kan også hende at Bulwark må installeres før programmet kan velges som standardapp.",
+    "browser_note": "Nettleseren eller operativsystemet kan be deg bekrefte dette. Det kan også hende at Inotum må installeres før programmet kan velges som standardapp.",
     "select_account_title": "Velg konto",
     "select_mailto_account": "Velg hvilken konto som skal åpne denne e-postlenken.",
     "select_webcal_account": "Velg hvilken konto som skal åpne denne kalenderlenken.",
@@ -752,9 +752,9 @@
     "app_title": "Nettpost",
     "reconnecting": "Tilkoblingen ble brutt. Forsøker å koble til på nytt...",
     "rate_limited_title": "Serveren begrenser midlertidig antall autentiseringsforsøk.",
-    "rate_limited_detail": "Bulwark har satt bakgrunnsforespørsler på pause for å unngå at kontoen blir låst. Prøver på nytt om {seconds} sekunder.",
+    "rate_limited_detail": "Inotum har satt bakgrunnsforespørsler på pause for å unngå at kontoen blir låst. Prøver på nytt om {seconds} sekunder.",
     "rate_limited_action_title": "Forespørselen er satt på pause for å unngå at kontoen blir låst.",
-    "rate_limited_action_detail": "Bulwark venter til sperreperioden på serveren er over før flere autentiserte forespørsler sendes. Prøv igjen om {seconds} sekunder.",
+    "rate_limited_action_detail": "Inotum venter til sperreperioden på serveren er over før flere autentiserte forespørsler sendes. Prøv igjen om {seconds} sekunder.",
     "pull_to_refresh": "Dra ned for å oppdatere",
     "release_to_refresh": "Slipp for å oppdatere",
     "refreshing": "Oppdaterer..."
@@ -1860,7 +1860,7 @@
         "button": "Importer"
       },
       "about": {
-        "title": "Bulwark nettpost"
+        "title": "Inotum nettpost"
       }
     },
     "sidebar_apps": {
@@ -3217,7 +3217,7 @@
     "start_tour": "Start omvisningen"
   },
   "demo_welcome": {
-    "title": "Velkommen til Bulwark Mail",
+    "title": "Velkommen til Inotum Mail",
     "description": "Utforsk en fullverdig nettpostklient – rett i nettleseren. Alle data forblir på enheten din, så du kan gjerne prøve alt.",
     "feature_email": "Les og skriv e-post",
     "feature_organize": "Etiketter, stjerner og mapper",

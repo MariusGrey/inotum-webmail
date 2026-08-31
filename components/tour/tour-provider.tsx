@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from "react";
+import { createContext, useContext, useState, useCallback, useEffect, useMemo, type ReactNode } from "react";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { useAuthStore } from "@/stores/auth-store";
 import { useCalendarStore } from "@/stores/calendar-store";
@@ -8,6 +8,7 @@ import { useWebDAVStore } from "@/stores/webdav-store";
 import { useSettingsStore } from "@/stores/settings-store";
 import { usePolicyStore } from "@/stores/policy-store";
 import { getTourSteps, type TourStep } from "./tour-steps";
+import { useResolvedSidebarApps } from "@/hooks/use-resolved-sidebar-apps";
 import { TourOverlay } from "./tour-overlay";
 
 const TOUR_COMPLETED_KEY = "tour_completed";
@@ -49,7 +50,13 @@ export function TourProvider({ children }: { children: ReactNode }) {
   const [currentStep, setCurrentStep] = useState(0);
   const [hasCompletedTour, setHasCompletedTour] = useState(false);
 
-  const steps = getTourSteps({ isDemoMode, supportsCalendar: supportsCalendar && calendarEnabled, supportsWebDAV: supportsWebDAV !== false });
+  // Inotum fork: policy-pinned sidebar apps get their own tour step.
+  const resolvedApps = useResolvedSidebarApps();
+  const pinnedAppIds = useMemo(() => resolvedApps.filter((a) => a.managed).map((a) => a.id), [resolvedApps]);
+  const steps = useMemo(
+    () => getTourSteps({ isDemoMode, supportsCalendar: supportsCalendar && calendarEnabled, supportsWebDAV: supportsWebDAV !== false, pinnedAppIds }),
+    [isDemoMode, supportsCalendar, calendarEnabled, supportsWebDAV, pinnedAppIds],
+  );
 
   useEffect(() => {
     // One-time migration: if the legacy per-device flag is set but the synced

@@ -197,15 +197,37 @@ export const DEMO_TOUR_STEPS: TourStep[] = [
   },
 ];
 
+// Inotum fork: one step for the pinned Inotum apps in the navigation rail
+// (Google Calendar sync, mailbox setup). Anchored on the first pinned app so
+// it works whichever apps the admin policy pins; skipped when none is pinned.
+export function inotumAppsStep(firstAppId: string): TourStep {
+  return {
+    id: "inotum-apps",
+    target: `[data-tour="app-${firstAppId}"]`,
+    titleKey: "tour.inotum_apps_title",
+    descriptionKey: "tour.inotum_apps_desc",
+    placement: "right",
+  };
+}
+
 export function getTourSteps(options: {
   isDemoMode: boolean;
   supportsCalendar: boolean;
   supportsWebDAV: boolean;
+  /** Inotum fork: ids of the sidebar apps pinned by policy (in display order). */
+  pinnedAppIds?: string[];
 }): TourStep[] {
   let steps = [...BASE_TOUR_STEPS];
 
   if (!options.supportsCalendar) {
     steps = steps.filter((s) => s.id !== "nav-calendar");
+  }
+
+  const firstPinned = options.pinnedAppIds?.[0];
+  if (firstPinned) {
+    const idx = steps.findIndex((s) => s.id === "nav-settings");
+    const step = inotumAppsStep(firstPinned);
+    if (idx >= 0) steps.splice(idx, 0, step); else steps.push(step);
   }
 
   if (options.isDemoMode) {

@@ -394,6 +394,7 @@ export function NavigationRail({
           return (
             <button
               key={app.id}
+              data-tour={`app-${app.id}`}
               onClick={() => {
                 if (isActive) {
                   onCloseInlineApp?.();
@@ -558,6 +559,7 @@ export function NavigationRail({
           return (
             <button
               key={app.id}
+              data-tour={`app-${app.id}`}
               onClick={() => {
                 if (isActive) {
                   onCloseInlineApp?.();

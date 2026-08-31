@@ -250,9 +250,7 @@
     "mark_read": "סמן כנקרא",
     "print": "הדפס",
     "view_source": "צפה במקור",
-
     "fullscreen": "מסך מלא",
-
     "exit_fullscreen": "יציאה ממסך מלא",
     "export_email": "ייצא כ-.eml",
     "forward_as_attachment": "Forward as attachment",
@@ -719,9 +717,9 @@
     "app_title": "Webmail",
     "reconnecting": "החיבור אבד. מנסה להתחבר מחדש...",
     "rate_limited_title": "אימות השרת מוגבל באופן זמני בקצב.",
-    "rate_limited_detail": "Bulwark השהתה בקשות ברקע כדי למנוע נעילה. מנסה שוב ב-{seconds}s.",
+    "rate_limited_detail": "Inotum השהתה בקשות ברקע כדי למנוע נעילה. מנסה שוב ב-{seconds}s.",
     "rate_limited_action_title": "הבקשה הושהתה כדי למנוע נעילה.",
-    "rate_limited_action_detail": "Bulwark ממתין עד שקירור השרת יסתיים לפני שליחת בקשות מאומתות יותר. נסה שוב ב-{seconds}s.",
+    "rate_limited_action_detail": "Inotum ממתין עד שקירור השרת יסתיים לפני שליחת בקשות מאומתות יותר. נסה שוב ב-{seconds}s.",
     "pull_to_refresh": "משוך לרענון",
     "release_to_refresh": "שחרר לרענון",
     "refreshing": "מרענן…"
@@ -1817,7 +1815,7 @@
         "button": "ייבוא"
       },
       "about": {
-        "title": "Bulwark Webmail"
+        "title": "Inotum Webmail"
       },
       "show_avatars_in_junk": {
         "label": "הצג אווטרים בתיקייה זבל",
@@ -3379,18 +3377,18 @@
   "meta_description": "לקוח webmail מינימליסטי באמצעות פרוטוקול JMAP",
   "protocol_handlers": {
     "title": "יישומים ברירת מחדל",
-    "description": "בחר אם קישורי דוא״ל ולוח שנה ייפתחו ב־Bulwark. מבחינה טכנית, Bulwark רשום כטיפול בפרוטוקול עבור קישורי mailto: ו־webcal:.",
+    "description": "בחר אם קישורי דוא״ל ולוח שנה ייפתחו ב־Inotum. מבחינה טכנית, Inotum רשום כטיפול בפרוטוקול עבור קישורי mailto: ו־webcal:.",
     "unsupported": "דפדפן זה או חיבור זה לא תומך בהרשמה ידנית של טיפול בפרוטוקול. ייתכן שעדיין תוכל להשתמש ב־PWA המותקנת דרך הדפדפן או הגדרות מערכת ההפעלה.",
     "mailto_label": "קישורי דוא״ל",
-    "mailto_description": "פתח קישורי mailto: ב־Bulwark עם מחבר שמלא מראש.",
+    "mailto_description": "פתח קישורי mailto: ב־Inotum עם מחבר שמלא מראש.",
     "protocol_open_mode_label": "בעת פתיחת קישורי פרוטוקול",
-    "protocol_open_mode_description": "בחר אם Bulwark יפתח קישורי mailto: ו־webcal: בלשונית חדשה או ישתמש בחיבור פתוח. אפשרות הישיבה הפעילה דורשת הרשאת עדכון כדי שתוכל ללחוץ על עדכון נופל כדי להביא את Bulwark לחזית אם הדפדפן חוסם מיקוד.",
+    "protocol_open_mode_description": "בחר אם Inotum יפתח קישורי mailto: ו־webcal: בלשונית חדשה או ישתמש בחיבור פתוח. אפשרות הישיבה הפעילה דורשת הרשאת עדכון כדי שתוכל ללחוץ על עדכון נופל כדי להביא את Inotum לחזית אם הדפדפן חוסם מיקוד.",
     "protocol_open_mode_active_session": "פתח בישיבה פעילה אם אפשר",
     "protocol_open_mode_new_tab": "פתח תמיד לשונית חדשה",
-    "focus_notification_title": "פתח את Bulwark",
-    "focus_notification_body": "הקישור נפתח ב־Bulwark. לחץ כדי להביא את החלון לחזית.",
+    "focus_notification_title": "פתח את Inotum",
+    "focus_notification_body": "הקישור נפתח ב־Inotum. לחץ כדי להביא את החלון לחזית.",
     "webcal_label": "קישורי לוח שנה",
-    "webcal_description": "פתח קישורי webcal: ב־Bulwark עם תיבת דו־שיח מלא מראש להרשמה ללוח שנה.",
+    "webcal_description": "פתח קישורי webcal: ב־Inotum עם תיבת דו־שיח מלא מראש להרשמה ללוח שנה.",
     "register_mailto": "רשום יישום דוא״ל",
     "register_webcal": "רשום יישום לוח שנה",
     "mailto_registered": "בקש הרשמה של מטפל דוא״ל",
@@ -3398,7 +3396,7 @@
     "registration_failed": "הרשמת טיפול בפרוטוקול נכשלה",
     "opening_mailto": "פתיחת מחבר…",
     "opening_webcal": "פתיחת לוח שנה…",
-    "browser_note": "הדפדפן או מערכת ההפעלה שלך עשויים לבקש ממך לאשר זאת ועשויים לדרוש שBulwark יותקן לפני שניתן לבחור אותו כיישום ברירת המחדל.",
+    "browser_note": "הדפדפן או מערכת ההפעלה שלך עשויים לבקש ממך לאשר זאת ועשויים לדרוש שInotum יותקן לפני שניתן לבחור אותו כיישום ברירת המחדל.",
     "select_account_title": "בחר חשבון",
     "select_mailto_account": "בחר איזה חשבון צריך לפתוח קישור דוא״ל זה.",
     "select_webcal_account": "בחר איזה חשבון צריך לפתוח קישור לוח שנה זה.",

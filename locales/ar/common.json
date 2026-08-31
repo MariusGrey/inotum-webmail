@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "التطبيقات الافتراضية",
-    "description": "اختر ما إذا كانت روابط البريد والتقويم تُفتح في Bulwark. من الناحية التقنية، يسجّل Bulwark نفسه كمعالج بروتوكول لروابط mailto: وwebcal:.",
+    "description": "اختر ما إذا كانت روابط البريد والتقويم تُفتح في Inotum. من الناحية التقنية، يسجّل Inotum نفسه كمعالج بروتوكول لروابط mailto: وwebcal:.",
     "unsupported": "هذا المتصفح أو الاتصال لا يدعم التسجيل اليدوي لمعالج البروتوكول. قد يمكنك مع ذلك استخدام تطبيق PWA المثبّت عبر إعدادات المتصفح أو النظام.",
     "mailto_label": "روابط البريد الإلكتروني",
-    "mailto_description": "فتح روابط mailto: في Bulwark مع نافذة إنشاء رسالة معبأة مسبقًا.",
+    "mailto_description": "فتح روابط mailto: في Inotum مع نافذة إنشاء رسالة معبأة مسبقًا.",
     "protocol_open_mode_label": "عند فتح روابط البروتوكول",
-    "protocol_open_mode_description": "اختر ما إذا كان Bulwark يفتح روابط mailto: وwebcal: في علامة تبويب جديدة أو يعيد استخدام جلسة مفتوحة. يتطلب خيار الجلسة النشطة إذن الإشعارات حتى تتمكن من النقر على إشعار احتياطي لإحضار Bulwark إلى المقدمة إذا منع المتصفح التركيز.",
+    "protocol_open_mode_description": "اختر ما إذا كان Inotum يفتح روابط mailto: وwebcal: في علامة تبويب جديدة أو يعيد استخدام جلسة مفتوحة. يتطلب خيار الجلسة النشطة إذن الإشعارات حتى تتمكن من النقر على إشعار احتياطي لإحضار Inotum إلى المقدمة إذا منع المتصفح التركيز.",
     "protocol_open_mode_active_session": "الفتح في الجلسة النشطة إن أمكن",
     "protocol_open_mode_new_tab": "فتح علامة تبويب جديدة دائمًا",
-    "focus_notification_title": "فتح Bulwark",
-    "focus_notification_body": "تم فتح الرابط في Bulwark. انقر لإحضار النافذة إلى المقدمة.",
+    "focus_notification_title": "فتح Inotum",
+    "focus_notification_body": "تم فتح الرابط في Inotum. انقر لإحضار النافذة إلى المقدمة.",
     "webcal_label": "روابط التقويم",
-    "webcal_description": "فتح روابط webcal: في Bulwark مع نافذة اشتراك تقويم معبأة مسبقًا.",
+    "webcal_description": "فتح روابط webcal: في Inotum مع نافذة اشتراك تقويم معبأة مسبقًا.",
     "register_mailto": "تسجيل تطبيق البريد",
     "register_webcal": "تسجيل تطبيق التقويم",
     "mailto_registered": "تم طلب تسجيل معالج البريد الإلكتروني",
@@ -166,7 +166,7 @@
     "registration_failed": "فشل تسجيل معالج البروتوكول",
     "opening_mailto": "جارٍ فتح نافذة الإنشاء...",
     "opening_webcal": "جارٍ فتح التقويم...",
-    "browser_note": "قد يطلب منك المتصفح أو نظام التشغيل تأكيد ذلك، وقد يتطلب تثبيت Bulwark أولًا قبل إمكانية اختياره كتطبيق افتراضي.",
+    "browser_note": "قد يطلب منك المتصفح أو نظام التشغيل تأكيد ذلك، وقد يتطلب تثبيت Inotum أولًا قبل إمكانية اختياره كتطبيق افتراضي.",
     "select_account_title": "اختر الحساب",
     "select_mailto_account": "اختر الحساب الذي سيفتح رابط البريد هذا.",
     "select_webcal_account": "اختر الحساب الذي سيفتح رابط التقويم هذا.",
@@ -303,9 +303,7 @@
     "move": "نقل",
     "print": "طباعة",
     "view_source": "عرض المصدر",
-
     "fullscreen": "ملء الشاشة",
-
     "exit_fullscreen": "الخروج من ملء الشاشة",
     "export_email": "تصدير كملف ‎.eml",
     "forward_as_attachment": "Forward as attachment",
@@ -754,9 +752,9 @@
     "app_title": "البريد الإلكتروني",
     "reconnecting": "انقطع الاتصال. جارٍ محاولة إعادة الاتصال…",
     "rate_limited_title": "مصادقة الخادم مقيّدة مؤقتًا بحد المعدل.",
-    "rate_limited_detail": "أوقف Bulwark الطلبات في الخلفية مؤقتًا لتجنب الحظر. ستتم إعادة المحاولة خلال {seconds} ثانية.",
+    "rate_limited_detail": "أوقف Inotum الطلبات في الخلفية مؤقتًا لتجنب الحظر. ستتم إعادة المحاولة خلال {seconds} ثانية.",
     "rate_limited_action_title": "تم إيقاف الطلب مؤقتًا لتجنب الحظر.",
-    "rate_limited_action_detail": "ينتظر Bulwark انتهاء فترة تهدئة الخادم قبل إرسال المزيد من الطلبات الموثّقة. حاول مرة أخرى خلال {seconds} ثانية.",
+    "rate_limited_action_detail": "ينتظر Inotum انتهاء فترة تهدئة الخادم قبل إرسال المزيد من الطلبات الموثّقة. حاول مرة أخرى خلال {seconds} ثانية.",
     "pull_to_refresh": "اسحب للتحديث",
     "release_to_refresh": "أفلت للتحديث",
     "refreshing": "جارٍ التحديث…"
@@ -1862,7 +1860,7 @@
         "button": "استيراد"
       },
       "about": {
-        "title": "بريد Bulwark الإلكتروني"
+        "title": "بريد Inotum الإلكتروني"
       }
     },
     "sidebar_apps": {
@@ -3219,7 +3217,7 @@
     "start_tour": "بدء الجولة"
   },
   "demo_welcome": {
-    "title": "مرحبًا بك في بريد Bulwark",
+    "title": "مرحبًا بك في بريد Inotum",
     "description": "استكشف عميل بريد ويب متكامل الميزات - مباشرة في متصفحك. تبقى جميع البيانات على جهازك، فلا تتردد في تجربة كل شيء.",
     "feature_email": "قراءة الرسائل وكتابتها",
     "feature_organize": "الوسوم والنجوم والمجلدات",

@@ -41,3 +41,20 @@ Poi aggiornare l'immagine in `compose.yaml` sul server, con tag fissato (mai `la
 git remote add upstream https://github.com/bulwarkmail/webmail.git
 git fetch upstream && git rebase upstream/main
 ```
+
+## 1.9.2-inotum.5 (2026-08-31)
+
+Evoluzioni Inotum: le prime funzioni vere del fork, non solo branding.
+
+| Area | File | Cosa fa |
+| --- | --- | --- |
+| Calendario | `lib/inotum/calfeeds.ts`, `lib/inotum/identity.ts`, `app/api/inotum/calfeed/route.ts`, `components/settings/inotum-google-calendar.tsx` | L'utente crea/rigenera/revoca da solo il link .ics segreto dei propri calendari e lo aggiunge a Google Calendar in un clic; nella stessa scheda la direzione opposta (sottoscrizione al calendario Google). Store JSON in `/app/data/inotum/calfeeds.json`, identita' verificata come in `/api/settings`. |
+| Configurazione client | `components/settings/inotum-mailbox-setup.tsx` | Scheda "Configura la tua casella" con IMAP/SMTP/CalDAV/JMAP gia' compilati per l'account, QR per il telefono, scorciatoia alle password per le app. Host derivato dal server JMAP della sessione (multi-dominio). |
+| Localizzazione | `scripts/inotum-locales.py` | Rebranding Bulwark→Inotum su 27 lingue (esclusi i riferimenti al relay push e all'app mobile reali di Bulwark) + stringhe nuove it/en. Idempotente: rieseguirlo dopo ogni merge da upstream. |
+| Tour | `components/tour/tour-steps.ts`, `tour-provider.tsx`, `components/layout/navigation-rail.tsx` | Passo del tour sulle app Inotum fissate dalla policy (`data-tour="app-<id>"` su rail e barra mobile), saltato se non ce n'e' nessuna. |
+
+Test: `lib/inotum/__tests__/calfeeds.test.ts` (6), `components/tour/__tests__/inotum-tour-steps.test.ts` (3), typecheck pulito, eslint pulito sui file toccati.
+
+Lato host (repo mailserver, non in questo fork): `ops/gcal-export.py` legge il JSON e
+esporta i calendari con le credenziali dell'amministratore Stalwart, cancellando i feed
+dei token revocati.

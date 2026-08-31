@@ -22,6 +22,7 @@ import {
   HardDrive,
   BookUser,
   PanelLeftClose,
+  Wrench,
   Bell,
   Puzzle,
   LayoutGrid,
@@ -51,6 +52,9 @@ import { IdentitySettings } from '@/components/settings/identity-settings';
 import { VacationSettings } from '@/components/settings/vacation-settings';
 import { CalendarSettings } from '@/components/settings/calendar-settings';
 import { CalendarManagementSettings } from '@/components/settings/calendar-management-settings';
+// Inotum fork
+import { InotumGoogleCalendarSettings } from '@/components/settings/inotum-google-calendar';
+import { InotumMailboxSetup } from '@/components/settings/inotum-mailbox-setup';
 import { AddressBookManagementSettings } from '@/components/settings/address-book-management-settings';
 import { FilterSettings } from '@/components/settings/filter-settings';
 import { TemplateSettings } from '@/components/settings/template-settings';
@@ -114,6 +118,7 @@ type Tab =
   | 'files'
   | 'protocol_handlers'
   | 'sidebar_apps'
+  | 'inotum_setup'
   | 'about_data'
   | 'themes'
   | 'plugins'
@@ -156,6 +161,7 @@ const tabIcons: Record<Tab, LucideIcon> = {
   files: HardDrive,
   protocol_handlers: LinkIcon,
   sidebar_apps: PanelLeftClose,
+  inotum_setup: Wrench,
   about_data: Info,
   themes: SwatchBook,
   plugins: Puzzle,
@@ -234,11 +240,12 @@ const tabSearchPaths: Record<Tab, string[]> = {
     'settings.email_behavior.external_content',
     'settings.email_behavior.trusted_senders',
   ],
-  calendar: ['calendar.settings', 'calendar.management'],
+  calendar: ['calendar.settings', 'calendar.management', 'settings.inotum.google_calendar'],
   contacts: ['settings.contacts', 'contacts'],
   files: ['settings.files'],
   protocol_handlers: ['protocol_handlers'],
   sidebar_apps: ['settings.sidebar_apps', 'sidebar_apps'],
+  inotum_setup: ['settings.inotum.mailbox_setup'],
   about_data: ['settings.advanced'],
   themes: [],
   plugins: [],
@@ -269,6 +276,7 @@ const tabKeywords: Record<Tab, string> = {
   files: 'attachments cloud drive storage upload',
   protocol_handlers: 'mailto webcal links default app protocol handler',
   sidebar_apps: 'apps webview iframe',
+  inotum_setup: 'imap smtp caldav carddav jmap client outlook thunderbird apple mail phone qr app password configura casella',
   about_data: 'export import storage quota privacy backup',
   themes: 'custom theme css skin appearance',
   plugins: 'extensions addons',
@@ -722,6 +730,7 @@ export function SettingsApp({ linkSegments }: SettingsAppProps = {}) {
   const tabs: TabDef[] = [
     // General
     { id: 'account', label: t('tabs.account'), icon: tabIcons.account, group: 'general' },
+    { id: 'inotum_setup', label: t('tabs.inotum_setup'), icon: tabIcons.inotum_setup, group: 'general' },
     { id: 'language', label: t('tabs.language'), icon: tabIcons.language, group: 'general' },
     { id: 'notifications', label: t('tabs.notifications'), icon: tabIcons.notifications, group: 'general' },
     { id: 'protocol_handlers', label: t('tabs.protocol_handlers'), icon: tabIcons.protocol_handlers, group: 'general' },
@@ -875,7 +884,7 @@ export function SettingsApp({ linkSegments }: SettingsAppProps = {}) {
       {effectiveActiveTab === 'calendar' && (
         managedAccountId
           ? <CalendarManagementSettings />
-          : <><CalendarSettings /><div className="mt-8"><CalendarManagementSettings /></div></>
+          : <><CalendarSettings /><div className="mt-8"><CalendarManagementSettings /></div><div className="mt-8"><InotumGoogleCalendarSettings /></div></>
       )}
       {effectiveActiveTab === 'contacts' && (
         managedAccountId
@@ -885,6 +894,7 @@ export function SettingsApp({ linkSegments }: SettingsAppProps = {}) {
       {effectiveActiveTab === 'files' && <FilesSettingsComponent />}
       {effectiveActiveTab === 'protocol_handlers' && <ProtocolHandlerSettings supportsCalendar={supportsCalendar} />}
       {effectiveActiveTab === 'sidebar_apps' && <SidebarAppsSettings />}
+      {effectiveActiveTab === 'inotum_setup' && <InotumMailboxSetup />}
       {effectiveActiveTab === 'about_data' && <AboutDataSettings />}
       {effectiveActiveTab === 'themes' && <ThemesSettings />}
       {effectiveActiveTab === 'plugins' && <PluginsSettings />}
