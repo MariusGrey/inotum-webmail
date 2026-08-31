@@ -911,7 +911,8 @@
       "downloads": "Letöltések",
       "content_senders": "Tartalom és feladók",
       "about_data": "Névjegy és adatok",
-      "debug": "Hibakeresés"
+      "debug": "Hibakeresés",
+      "inotum_setup": "Set up your mailbox"
     },
     "tab_groups": {
       "general": "Általános",
@@ -2156,6 +2157,62 @@
     "scoped": {
       "back": "Vissza a saját fiókomhoz",
       "managing": "Kezelés: {name}"
+    },
+    "inotum": {
+      "google_calendar": {
+        "title": "Google Calendar",
+        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
+        "to_google_title": "Inotum → Google Calendar",
+        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "loading": "Loading…",
+        "link_label": "Secret calendar link",
+        "create": "Create my calendar link",
+        "create_hint": "The link is private: anyone who has it can read your calendar. You can regenerate or revoke it at any time.",
+        "created": "Calendar link created",
+        "regenerated": "Calendar link regenerated — the old one no longer works",
+        "regenerate": "Regenerate",
+        "revoke": "Revoke",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoked": "Calendar link revoked",
+        "copy": "Copy",
+        "copied": "Copied",
+        "add_to_google": "Add to Google Calendar",
+        "add_manually": "Add manually (from URL)",
+        "secret_warning": "Keep this link secret: it gives read access to your calendar.",
+        "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
+        "from_google_title": "Google Calendar → Inotum",
+        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
+        "open_google_settings": "Open Google Calendar settings",
+        "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
+        "from_google_step3": "Paste it in the subscription dialog below.",
+        "subscribe_button": "Add Google calendar (from URL)",
+        "google_calendar_name": "Google Calendar",
+        "error": "Something went wrong. Please try again."
+      },
+      "mailbox_setup": {
+        "title": "Set up your mailbox",
+        "description": "Everything you need to use this address in Outlook, Apple Mail, Thunderbird or on your phone.",
+        "password_title": "Use an app password",
+        "password_desc": "Do not type your main password into mail apps: create a dedicated app password (you can revoke it any time) and use it in the app.",
+        "password_button": "Create an app password",
+        "imap_title": "Incoming mail (IMAP)",
+        "smtp_title": "Outgoing mail (SMTP)",
+        "dav_title": "Calendar and contacts (CalDAV / CardDAV)",
+        "jmap_title": "JMAP",
+        "server": "Server",
+        "port": "Port",
+        "security": "Security",
+        "username": "Username",
+        "dav_server": "Server address",
+        "jmap_url": "JMAP session URL",
+        "copy": "Copy",
+        "copied": "Copied",
+        "qr_title": "Set up on your phone",
+        "qr_desc": "Scan the QR code to open the step-by-step guide with your address already filled in.",
+        "qr_alt": "QR code of the setup guide",
+        "autoconfig_note": "Most apps (Thunderbird, Apple Mail, Outlook) detect these settings automatically: just enter your address and the app password."
+      }
     }
   },
   "errors": {
@@ -3467,7 +3524,9 @@
     "demo_banner_title": "Demó vezérlők",
     "demo_banner_desc": "Demó módban vagy - minden a böngésződben marad. Nyomd meg a 'Demó visszaállítása' gombot bármikor a tiszta mintaadatokkal való újrakezdéshez.",
     "quota_title": "Tárhely használat",
-    "quota_desc": "Kövesd nyomon a postafiókod méretét itt. A kör kitöltődik, ahogy egyre több helyet használsz."
+    "quota_desc": "Kövesd nyomon a postafiókod méretét itt. A kör kitöltődik, ahogy egyre több helyet használsz.",
+    "inotum_apps_title": "Inotum tools",
+    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "A keresés nem érhető el az egységes nézetben"

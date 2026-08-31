@@ -178,6 +178,17 @@ def rebrand(obj, path=''):
     return changed
 
 
+def fill_missing(dst, src):
+    """Copia da `src` solo le chiavi che mancano in `dst`, senza toccare le traduzioni."""
+    for k, v in src.items():
+        if isinstance(v, dict):
+            if not isinstance(dst.get(k), dict):
+                dst[k] = {}
+            fill_missing(dst[k], v)
+        elif k not in dst:
+            dst[k] = v
+
+
 def deep_merge(dst, src):
     for k, v in src.items():
         if isinstance(v, dict) and isinstance(dst.get(k), dict):
@@ -198,6 +209,14 @@ def main():
         if loc in EXTRA:
             deep_merge(data, EXTRA[loc])
             n += 1
+        else:
+            # Ogni locale deve avere tutte le chiavi di `en` (lo verifica
+            # lib/__tests__/translations.test.ts): le lingue non tradotte
+            # ricevono il testo inglese, che è anche il fallback a runtime.
+            before = json.dumps(data, sort_keys=True)
+            fill_missing(data, EXTRA['en'])
+            if json.dumps(data, sort_keys=True) != before:
+                n += 1
         if n:
             with open(f, 'w', encoding='utf-8') as fh:
                 json.dump(data, fh, ensure_ascii=False, indent=2)
