@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useRouter } from "@/i18n/navigation";
 import { useParams, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -19,6 +19,7 @@ import { type OAuthMetadata } from "@/lib/oauth/discovery";
 import { generateCodeVerifier, generateCodeChallenge, generateState } from "@/lib/oauth/pkce";
 import { useUpdateStore, selectBanner } from "@/stores/update-store";
 import type { PublicJmapServerEntry } from "@/lib/admin/jmap-servers";
+import { findServerByHostname } from "@/lib/admin/jmap-servers";
 
 function findServerByDomain(servers: PublicJmapServerEntry[], email: string | undefined): PublicJmapServerEntry | undefined {
   if (!email || !email.includes("@")) return undefined;
@@ -216,12 +217,33 @@ export default function LoginPage() {
   useEffect(() => {
     if (!hasServerList) return;
     if (selectedServerId && jmapServers.some((s) => s.id === selectedServerId)) return;
-    setSelectedServerId(jmapServers[0].id);
+    // Inotum: se il nome host corrisponde a un server dichiarato quello e' il
+    // default, senza passare per il primo della lista.
+    const fromHost = typeof window === 'undefined'
+      ? null
+      : findServerByHostname(jmapServers, window.location.hostname);
+    setSelectedServerId((fromHost ?? jmapServers[0]).id);
   }, [hasServerList, jmapServers, selectedServerId]);
+
+  // Inotum: il nome host da cui si entra decide il server. Su webmail.inotum.it
+  // si finisce su mail.inotum.it senza scelte da fare, e il selettore sparisce:
+  // chi apre l'indirizzo del proprio dominio ha gia' detto tutto quello che
+  // serve sapere. Se l'host non corrisponde a nessun server dichiarato si torna
+  // al comportamento normale (selettore + scelta dal dominio dell'indirizzo).
+  const serverFromHostname = useMemo(
+    () => (typeof window === 'undefined' ? null : findServerByHostname(jmapServers, window.location.hostname)),
+    [jmapServers],
+  );
+
+  useEffect(() => {
+    if (!serverFromHostname) return;
+    if (selectedServerId !== serverFromHostname.id) setSelectedServerId(serverFromHostname.id);
+  }, [serverFromHostname, selectedServerId]);
 
   // Auto-pick by email domain. Locks the dropdown to the matched server until
   // the user clears the email or types a domain we don't recognize.
   useEffect(() => {
+    if (serverFromHostname) return;
     if (!jmapServerAutoPickByDomain || !hasServerList) return;
     const match = findServerByDomain(jmapServers, formData.username);
     if (match) {
@@ -230,7 +252,7 @@ export default function LoginPage() {
     } else {
       setDomainAutoLocked(false);
     }
-  }, [jmapServerAutoPickByDomain, hasServerList, jmapServers, formData.username, selectedServerId]);
+  }, [serverFromHostname, jmapServerAutoPickByDomain, hasServerList, jmapServers, formData.username, selectedServerId]);
 
   useEffect(() => {
     try {
@@ -701,7 +723,7 @@ export default function LoginPage() {
   // has to pick which one SSO targets before the button starts the flow, since
   // the selection drives OAuth discovery and the server_id sent to the callback
   // (issue #799).
-  const serverPicker = hasServerList && jmapServers.length > 1 ? (
+  const serverPicker = hasServerList && jmapServers.length > 1 && !serverFromHostname ? (
     <div className="space-y-1.5">
       <label htmlFor="jmap-server-select" className="block text-sm font-medium text-foreground">
         {t("jmap_server_label")}

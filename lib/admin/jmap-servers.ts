@@ -42,6 +42,34 @@ function isHttpUrl(url: string): boolean {
   }
 }
 
+/**
+ * Inotum: trova il server JMAP a partire dal nome host da cui si sta navigando.
+ *
+ * L'idea e' che l'indirizzo con cui entri decida gia' il server: chi apre
+ * webmail.inotum.it deve finire su mail.inotum.it senza dover scegliere niente.
+ * Si toglie il primo pezzo dell'hostname quando e' un prefisso di servizio
+ * (webmail/mail/posta) e si cerca il dominio risultante fra quelli dichiarati.
+ */
+export function findServerByHostname<T extends { domains?: string[] }>(
+  servers: T[],
+  hostname: string | null | undefined,
+): T | null {
+  if (!hostname) return null;
+  const host = hostname.trim().toLowerCase().replace(/\.$/, '').split(':')[0];
+  if (!host) return null;
+  const candidates = [host];
+  const first = host.split('.')[0];
+  if (['webmail', 'mail', 'posta', 'www'].includes(first)) {
+    candidates.push(host.slice(first.length + 1));
+  }
+  for (const candidate of candidates) {
+    if (!candidate) continue;
+    const match = servers.find((s) => (s.domains ?? []).some((d) => d.toLowerCase() === candidate));
+    if (match) return match;
+  }
+  return null;
+}
+
 /** Parse the raw config value (may be array, string JSON, or null). */
 export function parseJmapServers(raw: unknown): JmapServerEntry[] {
   if (!raw) return [];

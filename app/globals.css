@@ -885,3 +885,18 @@ body {
 [dir="rtl"] .lucide-panel-right {
   transform: scaleX(-1);
 }
+
+/* Inotum: angoli arrotondati quando l'app gira come finestra installata (PWA).
+   La cornice della finestra la disegna il sistema operativo — Windows 11 la
+   arrotonda gia' di suo — mentre questo arrotonda il CONTENUTO, che altrimenti
+   riempie fino allo spigolo e fa sembrare la finestra squadrata. Se su qualche
+   sistema dovesse dare fastidio, e' un blocco solo: si toglie e via. */
+@media all and (display-mode: standalone), all and (display-mode: window-controls-overlay) {
+  html {
+    background: var(--background);
+  }
+  body {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
