@@ -1,6 +1,8 @@
 import { getRequestConfig } from 'next-intl/server';
 import { headers } from 'next/headers';
 import { mergeMessages } from './merge-messages';
+import { applyBrand } from './brand';
+import { resolveBrandNames } from './brand-server';
 import { localeFromAcceptLanguage } from './locale-matcher';
 import { routing, type Locale } from './routing';
 
@@ -101,6 +103,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     const enBase = (await import('../locales/en/common.json')).default as Record<string, unknown>;
     messages = mergeMessages(enBase, messages as Record<string, unknown>);
   }
+
+  // Inotum: fill in __APP__/__BRAND__ with the instance's names (runtime, per host).
+  messages = applyBrand(messages as Record<string, unknown>, await resolveBrandNames());
 
   return {
     locale,

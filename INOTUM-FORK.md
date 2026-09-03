@@ -3,7 +3,7 @@
 Fork di [bulwarkmail/webmail](https://github.com/bulwarkmail/webmail) (AGPL-3.0), la webmail
 JMAP usata da **Inotum Mail**. Base: **v1.9.2**, la stessa versione in produzione.
 
-## Stato: IN PRODUZIONE (immagine `inotum-webmail:1.9.2-inotum.3`)
+## Stato: IN PRODUZIONE (immagine `nexus-webmail:1.9.2-nexus.9`, prima `inotum-webmail:1.9.2-inotum.8`)
 
 Base: `bulwarkmail/webmail` main (v1.9.2 + #931). Prima motivazione del fork: l'immagine
 ufficiale pinnata era piu' vecchia del sorgente e non conteneva le app sidebar
@@ -31,9 +31,12 @@ per tutti gli utenti via `policy.json` (`defaultSidebarApps`).
 ## Build
 
 ```bash
-docker build -t inotum-webmail:1.9.2-inotum.N .
+docker build -t nexus-webmail:1.9.2-nexus.N .
 ```
-Poi aggiornare l'immagine in `compose.yaml` sul server, con tag fissato (mai `latest`).
+Poi aggiornare `WEBMAIL_IMAGE` in `.env` sul server, con tag fissato (mai `latest`).
+Dal tag `v1.9.2-nexus.9` la GitHub Action `.github/workflows/docker.yml` pubblica la stessa
+immagine su `ghcr.io/mariusgrey/nexus-webmail:<tag>` (pubblica): le altre istanze la
+scaricano, non la ricompilano.
 
 ## Aggiornamenti da upstream
 
@@ -58,3 +61,18 @@ Test: `lib/inotum/__tests__/calfeeds.test.ts` (6), `components/tour/__tests__/in
 Lato host (repo mailserver, non in questo fork): `ops/gcal-export.py` legge il JSON e
 esporta i calendari con le credenziali dell'amministratore Stalwart, cancellando i feed
 dei token revocati.
+
+## 1.9.2-nexus.9 (2026-09-03) — brand a runtime
+
+Il fork non contiene piu' il nome di un brand: e' la stessa immagine per Inotum, Magehood
+o chiunque altro.
+
+| Area | File | Cosa fa |
+| --- | --- | --- |
+| Brand | `i18n/brand.ts`, `i18n/brand-server.ts` | Le locale contengono i token `__APP__` (APP_NAME) e `__BRAND__` (LOGIN_COMPANY_NAME); vengono risolti a runtime lato server (`i18n/request.ts`, layout) e lato client (`intl-provider.tsx`) con la stessa precedenza di `/api/config`, quindi anche `DOMAIN_BRANDING` per host funziona nelle frasi. |
+| Localizzazione | `scripts/inotum-locales.py` | Scrive i token invece di "Inotum"; converte anche i cataloghi gia' rebrandizzati. Idempotente. |
+| Configurazione client | `components/settings/inotum-mailbox-setup.tsx` | Nessun host di fallback cablato: dominio dell'utente, altrimenti `webmail.<x>` → `mail.<x>` dell'host corrente. |
+| Test | `i18n/__tests__/brand.test.ts` | Sostituzione, fallback, idempotenza; i cataloghi en/it non contengono "Inotum" e nominano Bulwark solo nelle stringhe sul relay push e sull'app mobile reali. |
+
+Il namespace `inotum` nei nomi di file, route (`/api/inotum/*`), store (`/app/data/inotum`)
+e chiavi di traduzione (`settings.inotum.*`) e' un identificatore interno del fork e resta.

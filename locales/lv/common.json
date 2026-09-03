@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "Noklusējuma lietotnes",
-    "description": "Izvēlieties, vai e-pasta un kalendāra saites atvērt Inotum. Tehniski Inotum reģistrējas kā protokola apstrādātājs mailto: un webcal: saitēm.",
+    "description": "Izvēlieties, vai e-pasta un kalendāra saites atvērt __BRAND__. Tehniski __BRAND__ reģistrējas kā protokola apstrādātājs mailto: un webcal: saitēm.",
     "unsupported": "Šī pārlūkprogramma vai savienojums neatbalsta manuālu protokola apstrādātāja reģistrāciju. Iespējams, instalēto PWA joprojām var izmantot pārlūkprogrammas vai sistēmas iestatījumos.",
     "mailto_label": "E-pasta saites",
-    "mailto_description": "Atver mailto: saites Inotum ar iepriekš aizpildītu ziņojuma redaktoru.",
+    "mailto_description": "Atver mailto: saites __BRAND__ ar iepriekš aizpildītu ziņojuma redaktoru.",
     "protocol_open_mode_label": "Atverot protokola saites",
-    "protocol_open_mode_description": "Izvēlieties, vai Inotum atver mailto: un webcal: saites jaunā cilnē vai atkārtoti izmanto atvērtu sesiju. Aktīvās sesijas opcijai nepieciešama paziņojumu atļauja, lai jūs varētu noklikšķināt uz rezerves paziņojuma un izcelt Inotum priekšplānā, ja pārlūkprogramma bloķē fokusu.",
+    "protocol_open_mode_description": "Izvēlieties, vai __BRAND__ atver mailto: un webcal: saites jaunā cilnē vai atkārtoti izmanto atvērtu sesiju. Aktīvās sesijas opcijai nepieciešama paziņojumu atļauja, lai jūs varētu noklikšķināt uz rezerves paziņojuma un izcelt __BRAND__ priekšplānā, ja pārlūkprogramma bloķē fokusu.",
     "protocol_open_mode_active_session": "Ja iespējams, atvērt aktīvajā sesijā",
     "protocol_open_mode_new_tab": "Vienmēr atvērt jaunu cilni",
-    "focus_notification_title": "Atvērt Inotum",
-    "focus_notification_body": "Saite tika atvērta Inotum. Noklikšķiniet, lai izceltu logu priekšplānā.",
+    "focus_notification_title": "Atvērt __BRAND__",
+    "focus_notification_body": "Saite tika atvērta __BRAND__. Noklikšķiniet, lai izceltu logu priekšplānā.",
     "webcal_label": "Kalendāra saites",
-    "webcal_description": "Atver webcal: saites Inotum ar iepriekš aizpildītu kalendāra abonēšanas dialogu.",
+    "webcal_description": "Atver webcal: saites __BRAND__ ar iepriekš aizpildītu kalendāra abonēšanas dialogu.",
     "register_mailto": "Reģistrēt e-pasta lietotni",
     "register_webcal": "Reģistrēt kalendāra lietotni",
     "mailto_registered": "E-pasta apstrādātāja reģistrācija pieprasīta",
@@ -166,7 +166,7 @@
     "registration_failed": "Protokola apstrādātāja reģistrācija neizdevās",
     "opening_mailto": "Tiek atvērts redaktors...",
     "opening_webcal": "Tiek atvērts kalendārs...",
-    "browser_note": "Pārlūkprogramma vai operētājsistēma var lūgt apstiprinājumu un var prasīt, lai Inotum būtu instalēts, pirms to var izvēlēties kā noklusējuma lietotni.",
+    "browser_note": "Pārlūkprogramma vai operētājsistēma var lūgt apstiprinājumu un var prasīt, lai __BRAND__ būtu instalēts, pirms to var izvēlēties kā noklusējuma lietotni.",
     "select_account_title": "Izvēlieties kontu",
     "select_mailto_account": "Izvēlieties, kurā kontā atvērt šo e-pasta saiti.",
     "select_webcal_account": "Izvēlieties, kurā kontā atvērt šo kalendāra saiti.",
@@ -752,9 +752,9 @@
     "app_title": "Tīmekļa pasts",
     "reconnecting": "Savienojums pārtraukts. Mēģina izveidot savienojumu...",
     "rate_limited_title": "Autentifikācija serverī ir īslaicīgi ierobežota.",
-    "rate_limited_detail": "Inotum ir apturējis fonā veiktos pieprasījumus, lai izvairītos no bloķēšanas. Mēģinās vēlreiz pēc {seconds} s.",
+    "rate_limited_detail": "__BRAND__ ir apturējis fonā veiktos pieprasījumus, lai izvairītos no bloķēšanas. Mēģinās vēlreiz pēc {seconds} s.",
     "rate_limited_action_title": "Pieprasījums apturēts, lai izvairītos no bloķēšanas.",
-    "rate_limited_action_detail": "Inotum gaida servera noildzes beigas pirms jaunu autentificētu pieprasījumu sūtīšanas. Mēģiniet vēlreiz pēc {seconds} s.",
+    "rate_limited_action_detail": "__BRAND__ gaida servera noildzes beigas pirms jaunu autentificētu pieprasījumu sūtīšanas. Mēģiniet vēlreiz pēc {seconds} s.",
     "pull_to_refresh": "Velciet, lai atsvaidzinātu",
     "release_to_refresh": "Atlaidiet, lai atsvaidzinātu",
     "refreshing": "Atsvaidzina…"
@@ -1854,7 +1854,7 @@
         "contacts_description": "Kontaktu sinhronizācija, adrešu grāmatu darbības un uzticamie sūtītāji"
       },
       "about": {
-        "title": "Inotum Webmail"
+        "title": "__BRAND__ Webmail"
       }
     },
     "sidebar_apps": {
@@ -2161,9 +2161,9 @@
     "inotum": {
       "google_calendar": {
         "title": "Google Calendar",
-        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
-        "to_google_title": "Inotum → Google Calendar",
-        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "description": "See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.",
+        "to_google_title": "__BRAND__ → Google Calendar",
+        "to_google_desc": "Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
         "loading": "Loading…",
         "link_label": "Secret calendar link",
         "create": "Create my calendar link",
@@ -2172,7 +2172,7 @@
         "regenerated": "Calendar link regenerated — the old one no longer works",
         "regenerate": "Regenerate",
         "revoke": "Revoke",
-        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your __BRAND__ events.",
         "revoked": "Calendar link revoked",
         "copy": "Copy",
         "copied": "Copied",
@@ -2180,8 +2180,8 @@
         "add_manually": "Add manually (from URL)",
         "secret_warning": "Keep this link secret: it gives read access to your calendar.",
         "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
-        "from_google_title": "Google Calendar → Inotum",
-        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_title": "Google Calendar → __BRAND__",
+        "from_google_desc": "Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.",
         "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
         "open_google_settings": "Open Google Calendar settings",
         "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
@@ -3251,7 +3251,7 @@
     "start_tour": "Sākt ekskursiju"
   },
   "demo_welcome": {
-    "title": "Laipni lūdzam Inotum Mail",
+    "title": "Laipni lūdzam __APP__",
     "description": "Atklājiet pilnvērtīgu tīmekļa e-pasta klientu tieši pārlūkā. Visi dati tiek glabāti jūsu ierīcē.",
     "feature_email": "Vēstuļu lasīšana un rakstīšana",
     "feature_organize": "Etiķetes, zvaigznītes un mapes",
@@ -3502,8 +3502,8 @@
     "demo_banner_desc": "Jūs esat demo režīmā - visi dati paliek jūsu pārlūkā. Nospiediet «Atiestatīt demo», lai sāktu no jauna.",
     "quota_title": "Krātuves izmantošana",
     "quota_desc": "Sekojiet līdzi savas pastkastes aizpildījumam šeit.",
-    "inotum_apps_title": "Inotum tools",
-    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
+    "inotum_apps_title": "__BRAND__ tools",
+    "inotum_apps_desc": "Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "Meklēšana nav pieejama apvienotajā skatā"

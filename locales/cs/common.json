@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "Výchozí aplikace",
-    "description": "Zvolte, zda se mají e-mailové a kalendářové odkazy otevírat v Inotumu. Technicky se Inotum registruje jako obslužná aplikace protokolu pro odkazy mailto: a webcal:.",
+    "description": "Zvolte, zda se mají e-mailové a kalendářové odkazy otevírat v __BRAND__u. Technicky se __BRAND__ registruje jako obslužná aplikace protokolu pro odkazy mailto: a webcal:.",
     "unsupported": "Tento prohlížeč nebo toto připojení nepodporuje ruční registraci obslužné aplikace protokolu. Nainstalovanou PWA můžete případně použít přes nastavení prohlížeče nebo systému.",
     "mailto_label": "E-mailové odkazy",
-    "mailto_description": "Otevře odkazy mailto: v Inotumu s předvyplněným editorem zprávy.",
+    "mailto_description": "Otevře odkazy mailto: v __BRAND__u s předvyplněným editorem zprávy.",
     "protocol_open_mode_label": "Při otevírání odkazů protokolů",
-    "protocol_open_mode_description": "Zvolte, zda má Inotum otevírat odkazy mailto: a webcal: v nové kartě, nebo znovu použít otevřenou relaci. Volba aktivní relace vyžaduje oprávnění k oznámením, abyste mohli kliknout na záložní oznámení a přenést Inotum do popředí, pokud prohlížeč blokuje fokus.",
+    "protocol_open_mode_description": "Zvolte, zda má __BRAND__ otevírat odkazy mailto: a webcal: v nové kartě, nebo znovu použít otevřenou relaci. Volba aktivní relace vyžaduje oprávnění k oznámením, abyste mohli kliknout na záložní oznámení a přenést __BRAND__ do popředí, pokud prohlížeč blokuje fokus.",
     "protocol_open_mode_active_session": "Otevřít v aktivní relaci, pokud je to možné",
     "protocol_open_mode_new_tab": "Vždy otevřít novou kartu",
-    "focus_notification_title": "Otevřít Inotum",
-    "focus_notification_body": "Odkaz byl otevřen v Inotumu. Kliknutím přenesete okno do popředí.",
+    "focus_notification_title": "Otevřít __BRAND__",
+    "focus_notification_body": "Odkaz byl otevřen v __BRAND__u. Kliknutím přenesete okno do popředí.",
     "webcal_label": "Kalendářové odkazy",
-    "webcal_description": "Otevře odkazy webcal: v Inotumu s předvyplněným dialogem pro odběr kalendáře.",
+    "webcal_description": "Otevře odkazy webcal: v __BRAND__u s předvyplněným dialogem pro odběr kalendáře.",
     "register_mailto": "Registrovat e-mailovou aplikaci",
     "register_webcal": "Registrovat kalendářovou aplikaci",
     "mailto_registered": "Registrace obsluhy e-mailových odkazů byla vyžádána",
@@ -166,7 +166,7 @@
     "registration_failed": "Registrace obslužné aplikace protokolu selhala",
     "opening_mailto": "Otevírá se editor...",
     "opening_webcal": "Otevírá se kalendář...",
-    "browser_note": "Prohlížeč nebo operační systém vás může požádat o potvrzení a může vyžadovat, aby byl Inotum nainstalovaný, než jej půjde vybrat jako výchozí aplikaci.",
+    "browser_note": "Prohlížeč nebo operační systém vás může požádat o potvrzení a může vyžadovat, aby byl __BRAND__ nainstalovaný, než jej půjde vybrat jako výchozí aplikaci.",
     "select_account_title": "Vybrat účet",
     "select_mailto_account": "Vyberte účet, ve kterém se má tento e-mailový odkaz otevřít.",
     "select_webcal_account": "Vyberte účet, ve kterém se má tento kalendářový odkaz otevřít.",
@@ -1854,7 +1854,7 @@
         "button": "Importovat"
       },
       "about": {
-        "title": "Inotum Webmail"
+        "title": "__BRAND__ Webmail"
       }
     },
     "sidebar_apps": {
@@ -2161,9 +2161,9 @@
     "inotum": {
       "google_calendar": {
         "title": "Google Calendar",
-        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
-        "to_google_title": "Inotum → Google Calendar",
-        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "description": "See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.",
+        "to_google_title": "__BRAND__ → Google Calendar",
+        "to_google_desc": "Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
         "loading": "Loading…",
         "link_label": "Secret calendar link",
         "create": "Create my calendar link",
@@ -2172,7 +2172,7 @@
         "regenerated": "Calendar link regenerated — the old one no longer works",
         "regenerate": "Regenerate",
         "revoke": "Revoke",
-        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your __BRAND__ events.",
         "revoked": "Calendar link revoked",
         "copy": "Copy",
         "copied": "Copied",
@@ -2180,8 +2180,8 @@
         "add_manually": "Add manually (from URL)",
         "secret_warning": "Keep this link secret: it gives read access to your calendar.",
         "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
-        "from_google_title": "Google Calendar → Inotum",
-        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_title": "Google Calendar → __BRAND__",
+        "from_google_desc": "Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.",
         "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
         "open_google_settings": "Open Google Calendar settings",
         "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
@@ -3251,7 +3251,7 @@
     "start_tour": "Spustit průvodce"
   },
   "demo_welcome": {
-    "title": "Vítejte v Inotum Mail",
+    "title": "Vítejte v __APP__",
     "description": "Prozkoumejte plně funkčního webového e-mailového klienta - přímo v prohlížeči. Všechna data zůstávají na vašem zařízení, takže můžete bez obav vše otestovat.",
     "feature_email": "Čtěte a pište e-maily",
     "feature_organize": "Štítky, hvězdičky a složky",
@@ -3502,8 +3502,8 @@
     "demo_banner_desc": "Nacházíte se v demo režimu - vše zůstává ve vašem prohlížeči. Kdykoli klikněte na „Resetovat“, abyste začali znovu s čistými ukázkovými daty.",
     "quota_title": "Využití úložiště",
     "quota_desc": "Zde můžete sledovat velikost své poštovní schránky. Kruh se plní podle využití kapacity.",
-    "inotum_apps_title": "Inotum tools",
-    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
+    "inotum_apps_title": "__BRAND__ tools",
+    "inotum_apps_desc": "Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "Vyhledávání není ve sjednoceném zobrazení k dispozici"

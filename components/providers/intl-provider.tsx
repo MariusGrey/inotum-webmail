@@ -9,6 +9,8 @@ import enMessages from '@/locales/en/common.json';
 import { getLocaleDirection } from '@/i18n/direction';
 import { mergeMessages } from '@/i18n/merge-messages';
 import { detectBrowserLocale } from '@/i18n/detect-locale';
+import { applyBrand } from '@/i18n/brand';
+import { useConfig } from '@/hooks/use-config';
 
 type Messages = Record<string, unknown>;
 
@@ -61,6 +63,9 @@ export function IntlProvider({ locale: initialLocale, messages: initialMessages,
   const [browserTimeZone, setBrowserTimeZone] = useState<string>('UTC');
   const timeZoneSetting = useSettingsStore((state) => state.timeZone);
   const timeZone = resolveTimeZone(timeZoneSetting, browserTimeZone);
+  // Inotum: catalogs carry __APP__/__BRAND__ tokens; the runtime config says
+  // what this instance is called (the SSR catalog arrives already branded).
+  const { appName, loginCompanyName } = useConfig();
 
   // The catalog currently in use. Seeded with the server-provided messages for
   // the SSR-resolved locale, so the first render needs no async work and
@@ -117,13 +122,13 @@ export function IntlProvider({ locale: initialLocale, messages: initialMessages,
 
   // Fall back to English for any key the active locale has not translated, so
   // untranslated strings show English text instead of a raw message key.
-  const messages = useMemo(
-    () =>
+  const messages = useMemo(() => {
+    const merged =
       catalog.locale === 'en'
         ? (enMessages as Messages)
-        : mergeMessages(enMessages as Messages, catalog.messages),
-    [catalog]
-  );
+        : mergeMessages(enMessages as Messages, catalog.messages);
+    return applyBrand(merged, { app: appName, brand: loginCompanyName });
+  }, [catalog, appName, loginCompanyName]);
 
   return (
     <NextIntlClientProvider

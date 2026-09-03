@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "التطبيقات الافتراضية",
-    "description": "اختر ما إذا كانت روابط البريد والتقويم تُفتح في Inotum. من الناحية التقنية، يسجّل Inotum نفسه كمعالج بروتوكول لروابط mailto: وwebcal:.",
+    "description": "اختر ما إذا كانت روابط البريد والتقويم تُفتح في __BRAND__. من الناحية التقنية، يسجّل __BRAND__ نفسه كمعالج بروتوكول لروابط mailto: وwebcal:.",
     "unsupported": "هذا المتصفح أو الاتصال لا يدعم التسجيل اليدوي لمعالج البروتوكول. قد يمكنك مع ذلك استخدام تطبيق PWA المثبّت عبر إعدادات المتصفح أو النظام.",
     "mailto_label": "روابط البريد الإلكتروني",
-    "mailto_description": "فتح روابط mailto: في Inotum مع نافذة إنشاء رسالة معبأة مسبقًا.",
+    "mailto_description": "فتح روابط mailto: في __BRAND__ مع نافذة إنشاء رسالة معبأة مسبقًا.",
     "protocol_open_mode_label": "عند فتح روابط البروتوكول",
-    "protocol_open_mode_description": "اختر ما إذا كان Inotum يفتح روابط mailto: وwebcal: في علامة تبويب جديدة أو يعيد استخدام جلسة مفتوحة. يتطلب خيار الجلسة النشطة إذن الإشعارات حتى تتمكن من النقر على إشعار احتياطي لإحضار Inotum إلى المقدمة إذا منع المتصفح التركيز.",
+    "protocol_open_mode_description": "اختر ما إذا كان __BRAND__ يفتح روابط mailto: وwebcal: في علامة تبويب جديدة أو يعيد استخدام جلسة مفتوحة. يتطلب خيار الجلسة النشطة إذن الإشعارات حتى تتمكن من النقر على إشعار احتياطي لإحضار __BRAND__ إلى المقدمة إذا منع المتصفح التركيز.",
     "protocol_open_mode_active_session": "الفتح في الجلسة النشطة إن أمكن",
     "protocol_open_mode_new_tab": "فتح علامة تبويب جديدة دائمًا",
-    "focus_notification_title": "فتح Inotum",
-    "focus_notification_body": "تم فتح الرابط في Inotum. انقر لإحضار النافذة إلى المقدمة.",
+    "focus_notification_title": "فتح __BRAND__",
+    "focus_notification_body": "تم فتح الرابط في __BRAND__. انقر لإحضار النافذة إلى المقدمة.",
     "webcal_label": "روابط التقويم",
-    "webcal_description": "فتح روابط webcal: في Inotum مع نافذة اشتراك تقويم معبأة مسبقًا.",
+    "webcal_description": "فتح روابط webcal: في __BRAND__ مع نافذة اشتراك تقويم معبأة مسبقًا.",
     "register_mailto": "تسجيل تطبيق البريد",
     "register_webcal": "تسجيل تطبيق التقويم",
     "mailto_registered": "تم طلب تسجيل معالج البريد الإلكتروني",
@@ -166,7 +166,7 @@
     "registration_failed": "فشل تسجيل معالج البروتوكول",
     "opening_mailto": "جارٍ فتح نافذة الإنشاء...",
     "opening_webcal": "جارٍ فتح التقويم...",
-    "browser_note": "قد يطلب منك المتصفح أو نظام التشغيل تأكيد ذلك، وقد يتطلب تثبيت Inotum أولًا قبل إمكانية اختياره كتطبيق افتراضي.",
+    "browser_note": "قد يطلب منك المتصفح أو نظام التشغيل تأكيد ذلك، وقد يتطلب تثبيت __BRAND__ أولًا قبل إمكانية اختياره كتطبيق افتراضي.",
     "select_account_title": "اختر الحساب",
     "select_mailto_account": "اختر الحساب الذي سيفتح رابط البريد هذا.",
     "select_webcal_account": "اختر الحساب الذي سيفتح رابط التقويم هذا.",
@@ -752,9 +752,9 @@
     "app_title": "البريد الإلكتروني",
     "reconnecting": "انقطع الاتصال. جارٍ محاولة إعادة الاتصال…",
     "rate_limited_title": "مصادقة الخادم مقيّدة مؤقتًا بحد المعدل.",
-    "rate_limited_detail": "أوقف Inotum الطلبات في الخلفية مؤقتًا لتجنب الحظر. ستتم إعادة المحاولة خلال {seconds} ثانية.",
+    "rate_limited_detail": "أوقف __BRAND__ الطلبات في الخلفية مؤقتًا لتجنب الحظر. ستتم إعادة المحاولة خلال {seconds} ثانية.",
     "rate_limited_action_title": "تم إيقاف الطلب مؤقتًا لتجنب الحظر.",
-    "rate_limited_action_detail": "ينتظر Inotum انتهاء فترة تهدئة الخادم قبل إرسال المزيد من الطلبات الموثّقة. حاول مرة أخرى خلال {seconds} ثانية.",
+    "rate_limited_action_detail": "ينتظر __BRAND__ انتهاء فترة تهدئة الخادم قبل إرسال المزيد من الطلبات الموثّقة. حاول مرة أخرى خلال {seconds} ثانية.",
     "pull_to_refresh": "اسحب للتحديث",
     "release_to_refresh": "أفلت للتحديث",
     "refreshing": "جارٍ التحديث…"
@@ -1861,7 +1861,7 @@
         "button": "استيراد"
       },
       "about": {
-        "title": "بريد Inotum الإلكتروني"
+        "title": "بريد __BRAND__ الإلكتروني"
       }
     },
     "sidebar_apps": {
@@ -2161,9 +2161,9 @@
     "inotum": {
       "google_calendar": {
         "title": "Google Calendar",
-        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
-        "to_google_title": "Inotum → Google Calendar",
-        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "description": "See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.",
+        "to_google_title": "__BRAND__ → Google Calendar",
+        "to_google_desc": "Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
         "loading": "Loading…",
         "link_label": "Secret calendar link",
         "create": "Create my calendar link",
@@ -2172,7 +2172,7 @@
         "regenerated": "Calendar link regenerated — the old one no longer works",
         "regenerate": "Regenerate",
         "revoke": "Revoke",
-        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your __BRAND__ events.",
         "revoked": "Calendar link revoked",
         "copy": "Copy",
         "copied": "Copied",
@@ -2180,8 +2180,8 @@
         "add_manually": "Add manually (from URL)",
         "secret_warning": "Keep this link secret: it gives read access to your calendar.",
         "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
-        "from_google_title": "Google Calendar → Inotum",
-        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_title": "Google Calendar → __BRAND__",
+        "from_google_desc": "Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.",
         "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
         "open_google_settings": "Open Google Calendar settings",
         "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
@@ -3274,7 +3274,7 @@
     "start_tour": "بدء الجولة"
   },
   "demo_welcome": {
-    "title": "مرحبًا بك في بريد Inotum",
+    "title": "مرحبًا بك في بريد __BRAND__",
     "description": "استكشف عميل بريد ويب متكامل الميزات - مباشرة في متصفحك. تبقى جميع البيانات على جهازك، فلا تتردد في تجربة كل شيء.",
     "feature_email": "قراءة الرسائل وكتابتها",
     "feature_organize": "الوسوم والنجوم والمجلدات",
@@ -3525,8 +3525,8 @@
     "demo_banner_desc": "أنت في الوضع التجريبي - يبقى كل شيء في متصفحك. اضغط \"إعادة تعيين التجربة\" في أي وقت للبدء من جديد ببيانات نموذجية نظيفة.",
     "quota_title": "استخدام التخزين",
     "quota_desc": "تتبّع حجم صندوق بريدك هنا. تمتلئ الدائرة كلما استخدمت مساحة أكبر.",
-    "inotum_apps_title": "Inotum tools",
-    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
+    "inotum_apps_title": "__BRAND__ tools",
+    "inotum_apps_desc": "Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "البحث غير متاح في العرض الموحّد"

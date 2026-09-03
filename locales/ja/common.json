@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "既定のアプリ",
-    "description": "メールとカレンダーのリンクを Inotum で開くかどうかを選択します。技術的には、Inotum は mailto: と webcal: リンクのプロトコル ハンドラーとして登録されます。",
+    "description": "メールとカレンダーのリンクを __BRAND__ で開くかどうかを選択します。技術的には、__BRAND__ は mailto: と webcal: リンクのプロトコル ハンドラーとして登録されます。",
     "unsupported": "このブラウザーまたは接続では、プロトコル ハンドラーの手動登録がサポートされていません。インストール済みの PWA は、ブラウザーまたはシステム設定から使用できる場合があります。",
     "mailto_label": "メールリンク",
-    "mailto_description": "mailto: リンクを、入力済みの作成画面で Inotum に開きます。",
+    "mailto_description": "mailto: リンクを、入力済みの作成画面で __BRAND__ に開きます。",
     "protocol_open_mode_label": "プロトコルリンクを開くとき",
-    "protocol_open_mode_description": "Inotum が mailto: と webcal: のリンクを新しいタブで開くか、開いているセッションを再利用するかを選択します。アクティブなセッションのオプションでは通知の許可が必要です。ブラウザーがフォーカスをブロックした場合に、代替通知をクリックして Inotum を前面に表示できます。",
+    "protocol_open_mode_description": "__BRAND__ が mailto: と webcal: のリンクを新しいタブで開くか、開いているセッションを再利用するかを選択します。アクティブなセッションのオプションでは通知の許可が必要です。ブラウザーがフォーカスをブロックした場合に、代替通知をクリックして __BRAND__ を前面に表示できます。",
     "protocol_open_mode_active_session": "可能な場合はアクティブなセッションで開く",
     "protocol_open_mode_new_tab": "常に新しいタブを開く",
-    "focus_notification_title": "Inotum を開く",
-    "focus_notification_body": "リンクは Inotum で開かれました。クリックするとウィンドウを前面に表示します。",
+    "focus_notification_title": "__BRAND__ を開く",
+    "focus_notification_body": "リンクは __BRAND__ で開かれました。クリックするとウィンドウを前面に表示します。",
     "webcal_label": "カレンダーリンク",
-    "webcal_description": "webcal: リンクを、入力済みのカレンダー購読ダイアログで Inotum に開きます。",
+    "webcal_description": "webcal: リンクを、入力済みのカレンダー購読ダイアログで __BRAND__ に開きます。",
     "register_mailto": "メールアプリを登録",
     "register_webcal": "カレンダーアプリを登録",
     "mailto_registered": "メール ハンドラーの登録を要求しました",
@@ -166,7 +166,7 @@
     "registration_failed": "プロトコル ハンドラーの登録に失敗しました",
     "opening_mailto": "作成画面を開いています...",
     "opening_webcal": "カレンダーを開いています...",
-    "browser_note": "ブラウザーまたはオペレーティング システムから確認を求められる場合があります。また、既定のアプリとして選択する前に Inotum のインストールが必要な場合があります。",
+    "browser_note": "ブラウザーまたはオペレーティング システムから確認を求められる場合があります。また、既定のアプリとして選択する前に __BRAND__ のインストールが必要な場合があります。",
     "select_account_title": "アカウントを選択",
     "select_mailto_account": "このメールリンクを開くアカウントを選択してください。",
     "select_webcal_account": "このカレンダーリンクを開くアカウントを選択してください。",
@@ -752,9 +752,9 @@
     "app_title": "ウェブメール",
     "reconnecting": "接続が切れました。再接続を試みています…",
     "rate_limited_title": "サーバー認証は一時的に制限されています。",
-    "rate_limited_detail": "ロックアウトを避けるため、Inotum はバックグラウンド要求を一時停止しました。{seconds} 秒後に再試行します。",
+    "rate_limited_detail": "ロックアウトを避けるため、__BRAND__ はバックグラウンド要求を一時停止しました。{seconds} 秒後に再試行します。",
     "rate_limited_action_title": "ロックアウトを避けるため要求を一時停止しました。",
-    "rate_limited_action_detail": "Inotum はサーバーのクールダウンが終わるまで、追加の認証付きリクエストを送信しません。{seconds} 秒後に再試行してください。",
+    "rate_limited_action_detail": "__BRAND__ はサーバーのクールダウンが終わるまで、追加の認証付きリクエストを送信しません。{seconds} 秒後に再試行してください。",
     "pull_to_refresh": "引っ張って更新",
     "release_to_refresh": "離して更新",
     "refreshing": "更新中…"
@@ -1854,7 +1854,7 @@
         "button": "インポート"
       },
       "about": {
-        "title": "Inotum Webmail"
+        "title": "__BRAND__ Webmail"
       }
     },
     "sidebar_apps": {
@@ -2161,9 +2161,9 @@
     "inotum": {
       "google_calendar": {
         "title": "Google Calendar",
-        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
-        "to_google_title": "Inotum → Google Calendar",
-        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "description": "See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.",
+        "to_google_title": "__BRAND__ → Google Calendar",
+        "to_google_desc": "Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
         "loading": "Loading…",
         "link_label": "Secret calendar link",
         "create": "Create my calendar link",
@@ -2172,7 +2172,7 @@
         "regenerated": "Calendar link regenerated — the old one no longer works",
         "regenerate": "Regenerate",
         "revoke": "Revoke",
-        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your __BRAND__ events.",
         "revoked": "Calendar link revoked",
         "copy": "Copy",
         "copied": "Copied",
@@ -2180,8 +2180,8 @@
         "add_manually": "Add manually (from URL)",
         "secret_warning": "Keep this link secret: it gives read access to your calendar.",
         "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
-        "from_google_title": "Google Calendar → Inotum",
-        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_title": "Google Calendar → __BRAND__",
+        "from_google_desc": "Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.",
         "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
         "open_google_settings": "Open Google Calendar settings",
         "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
@@ -3251,7 +3251,7 @@
     "start_tour": "ツアーを開始"
   },
   "demo_welcome": {
-    "title": "Inotum Mail へようこそ",
+    "title": "__APP__ へようこそ",
     "description": "フル機能のウェブメールクライアントをブラウザで体験できます。すべてのデータはお使いのデバイスに保存されるので、自由にお試しください。",
     "feature_email": "メールの読み書き",
     "feature_organize": "タグ・スター・フォルダ",
@@ -3502,8 +3502,8 @@
     "demo_banner_desc": "デモモードです。すべてブラウザ内に保存されます。「デモをリセット」をクリックすると、いつでもクリーンなサンプルデータで再開できます。",
     "quota_title": "ストレージ使用量",
     "quota_desc": "メールボックスのサイズをここで確認できます。使用量が増えるとサークルが満たされます。",
-    "inotum_apps_title": "Inotum tools",
-    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
+    "inotum_apps_title": "__BRAND__ tools",
+    "inotum_apps_desc": "Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "統合ビューでは検索を利用できません"

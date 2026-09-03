@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "Standard-Apps",
-    "description": "Legen Sie fest, ob E-Mail- und Kalender-Links in Inotum geöffnet werden. Technisch registriert sich Inotum dafür als Protokoll-Handler für mailto: und webcal:.",
+    "description": "Legen Sie fest, ob E-Mail- und Kalender-Links in __BRAND__ geöffnet werden. Technisch registriert sich __BRAND__ dafür als Protokoll-Handler für mailto: und webcal:.",
     "unsupported": "Dieser Browser oder diese Verbindung unterstützt die manuelle Registrierung von Protokoll-Handlern nicht. Möglicherweise können Sie die installierte PWA trotzdem über Browser- oder Systemeinstellungen verwenden.",
     "mailto_label": "E-Mail-Links",
-    "mailto_description": "Öffnet mailto:-Links in Inotum mit vorausgefülltem Editor.",
+    "mailto_description": "Öffnet mailto:-Links in __BRAND__ mit vorausgefülltem Editor.",
     "protocol_open_mode_label": "Beim Öffnen von Protokoll-Links",
-    "protocol_open_mode_description": "Wähle, ob Inotum mailto:- und webcal:-Links immer in einem neuen Tab öffnet oder eine offene Sitzung wiederverwendet. Für die aktive Sitzung benötigt Inotum Benachrichtigungen, damit du das Fenster per Klick in den Vordergrund holen kannst, falls der Browser den Fokus blockiert.",
+    "protocol_open_mode_description": "Wähle, ob __BRAND__ mailto:- und webcal:-Links immer in einem neuen Tab öffnet oder eine offene Sitzung wiederverwendet. Für die aktive Sitzung benötigt __BRAND__ Benachrichtigungen, damit du das Fenster per Klick in den Vordergrund holen kannst, falls der Browser den Fokus blockiert.",
     "protocol_open_mode_active_session": "Wenn möglich in aktiver Sitzung öffnen",
     "protocol_open_mode_new_tab": "Immer neuen Tab öffnen",
-    "focus_notification_title": "Inotum öffnen",
-    "focus_notification_body": "Der Link wurde in Inotum geöffnet. Klicke hier, um das Fenster in den Vordergrund zu holen.",
+    "focus_notification_title": "__BRAND__ öffnen",
+    "focus_notification_body": "Der Link wurde in __BRAND__ geöffnet. Klicke hier, um das Fenster in den Vordergrund zu holen.",
     "webcal_label": "Kalender-Links",
-    "webcal_description": "Öffnet webcal:-Links in Inotum mit vorausgefülltem Kalender-Abo-Dialog.",
+    "webcal_description": "Öffnet webcal:-Links in __BRAND__ mit vorausgefülltem Kalender-Abo-Dialog.",
     "register_mailto": "Als E-Mail-App registrieren",
     "register_webcal": "Als Kalender-App registrieren",
     "mailto_registered": "Registrierung als E-Mail-Handler angefordert",
@@ -166,7 +166,7 @@
     "registration_failed": "Protokoll-Handler konnte nicht registriert werden",
     "opening_mailto": "Editor wird geöffnet...",
     "opening_webcal": "Kalender wird geöffnet...",
-    "browser_note": "Ihr Browser oder Betriebssystem kann eine Bestätigung verlangen. Eventuell muss Inotum installiert sein, bevor es als Standard-App ausgewählt werden kann.",
+    "browser_note": "Ihr Browser oder Betriebssystem kann eine Bestätigung verlangen. Eventuell muss __BRAND__ installiert sein, bevor es als Standard-App ausgewählt werden kann.",
     "select_account_title": "Account auswählen",
     "select_mailto_account": "Wähle aus, mit welchem Account dieser E-Mail-Link geöffnet werden soll.",
     "select_webcal_account": "Wähle aus, mit welchem Account dieser Kalender-Link geöffnet werden soll.",
@@ -752,9 +752,9 @@
     "app_title": "Webmail",
     "reconnecting": "Verbindung verloren. Verbindung wird wiederhergestellt…",
     "rate_limited_title": "Die Serverauthentifizierung ist vorubergehend begrenzt.",
-    "rate_limited_detail": "Inotum hat Hintergrundanfragen pausiert, um eine Sperre zu vermeiden. Neuer Versuch in {seconds}s.",
+    "rate_limited_detail": "__BRAND__ hat Hintergrundanfragen pausiert, um eine Sperre zu vermeiden. Neuer Versuch in {seconds}s.",
     "rate_limited_action_title": "Anfrage pausiert, um eine Sperre zu vermeiden.",
-    "rate_limited_action_detail": "Inotum wartet, bis die Serverabklingzeit endet, bevor weitere authentifizierte Anfragen gesendet werden. Versuchen Sie es in {seconds}s erneut.",
+    "rate_limited_action_detail": "__BRAND__ wartet, bis die Serverabklingzeit endet, bevor weitere authentifizierte Anfragen gesendet werden. Versuchen Sie es in {seconds}s erneut.",
     "pull_to_refresh": "Zum Aktualisieren ziehen",
     "release_to_refresh": "Zum Aktualisieren loslassen",
     "refreshing": "Wird aktualisiert…"
@@ -1854,7 +1854,7 @@
         "button": "Importieren"
       },
       "about": {
-        "title": "Inotum Webmail"
+        "title": "__BRAND__ Webmail"
       }
     },
     "sidebar_apps": {
@@ -2161,9 +2161,9 @@
     "inotum": {
       "google_calendar": {
         "title": "Google Calendar",
-        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
-        "to_google_title": "Inotum → Google Calendar",
-        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "description": "See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.",
+        "to_google_title": "__BRAND__ → Google Calendar",
+        "to_google_desc": "Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
         "loading": "Loading…",
         "link_label": "Secret calendar link",
         "create": "Create my calendar link",
@@ -2172,7 +2172,7 @@
         "regenerated": "Calendar link regenerated — the old one no longer works",
         "regenerate": "Regenerate",
         "revoke": "Revoke",
-        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your __BRAND__ events.",
         "revoked": "Calendar link revoked",
         "copy": "Copy",
         "copied": "Copied",
@@ -2180,8 +2180,8 @@
         "add_manually": "Add manually (from URL)",
         "secret_warning": "Keep this link secret: it gives read access to your calendar.",
         "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
-        "from_google_title": "Google Calendar → Inotum",
-        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_title": "Google Calendar → __BRAND__",
+        "from_google_desc": "Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.",
         "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
         "open_google_settings": "Open Google Calendar settings",
         "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
@@ -3251,7 +3251,7 @@
     "start_tour": "Tour starten"
   },
   "demo_welcome": {
-    "title": "Willkommen bei Inotum Mail",
+    "title": "Willkommen bei __APP__",
     "description": "Entdecken Sie einen voll ausgestatteten Webmail-Client - direkt in Ihrem Browser. Alle Daten bleiben auf Ihrem Gerät, also testen Sie alles.",
     "feature_email": "E-Mails lesen & verfassen",
     "feature_organize": "Tags, Sterne & Ordner",
@@ -3502,8 +3502,8 @@
     "demo_banner_desc": "Sie sind im Demo-Modus - alles bleibt in Ihrem Browser. Klicken Sie jederzeit auf 'Demo zurücksetzen'.",
     "quota_title": "Speichernutzung",
     "quota_desc": "Verfolgen Sie Ihre Postfachgröße hier. Der Kreis füllt sich mit zunehmendem Verbrauch.",
-    "inotum_apps_title": "Inotum tools",
-    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
+    "inotum_apps_title": "__BRAND__ tools",
+    "inotum_apps_desc": "Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "Die Suche ist in der vereinheitlichten Ansicht nicht verfügbar"

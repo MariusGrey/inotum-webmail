@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "Standardapps",
-    "description": "Vælg om e-mail- og kalenderlinks åbnes i Inotum. Teknisk set registrerer Inotum sig som protokolhåndtering for mailto:- og webcal:-links.",
+    "description": "Vælg om e-mail- og kalenderlinks åbnes i __BRAND__. Teknisk set registrerer __BRAND__ sig som protokolhåndtering for mailto:- og webcal:-links.",
     "unsupported": "Denne browser eller forbindelse understøtter ikke manuel registrering af protokolhåndtering. Du kan muligvis stadig bruge den installerede PWA via browser- eller OS-indstillinger.",
     "mailto_label": "E-mail-links",
-    "mailto_description": "Åbn mailto:-links i Inotum med en forudfyldt komponist.",
+    "mailto_description": "Åbn mailto:-links i __BRAND__ med en forudfyldt komponist.",
     "protocol_open_mode_label": "Ved åbning af protokollinks",
-    "protocol_open_mode_description": "Vælg om Inotum åbner mailto:- og webcal:-links i en ny fane eller genbruger en åben session. Indstillingen \\\"aktiv session\\\" kræver notifikationstilladelse, så du kan klikke på en nødnotifikation for at bringe Inotum frem, hvis browseren blokerer fokus.",
+    "protocol_open_mode_description": "Vælg om __BRAND__ åbner mailto:- og webcal:-links i en ny fane eller genbruger en åben session. Indstillingen \\\"aktiv session\\\" kræver notifikationstilladelse, så du kan klikke på en nødnotifikation for at bringe __BRAND__ frem, hvis browseren blokerer fokus.",
     "protocol_open_mode_active_session": "Åbn i aktiv session hvis muligt",
     "protocol_open_mode_new_tab": "Åbn altid ny fane",
-    "focus_notification_title": "Åbn Inotum",
-    "focus_notification_body": "Linket blev åbnet i Inotum. Klik for at bringe vinduet frem.",
+    "focus_notification_title": "Åbn __BRAND__",
+    "focus_notification_body": "Linket blev åbnet i __BRAND__. Klik for at bringe vinduet frem.",
     "webcal_label": "Kalenderlinks",
-    "webcal_description": "Åbn webcal:-links i Inotum med en forudfyldt kalenderabonnementsdialog.",
+    "webcal_description": "Åbn webcal:-links i __BRAND__ med en forudfyldt kalenderabonnementsdialog.",
     "register_mailto": "Registrer e-mail-app",
     "register_webcal": "Registrer kalender-app",
     "mailto_registered": "Registrering af e-mail-håndtering anmodet",
@@ -166,7 +166,7 @@
     "registration_failed": "Registrering af protokolhåndtering mislykkedes",
     "opening_mailto": "Åbner komponist...",
     "opening_webcal": "Åbner kalender...",
-    "browser_note": "Din browser eller dit operativsystem beder dig muligvis bekræfte dette og kræver muligvis, at Inotum er installeret, før det kan vælges som standardapp.",
+    "browser_note": "Din browser eller dit operativsystem beder dig muligvis bekræfte dette og kræver muligvis, at __BRAND__ er installeret, før det kan vælges som standardapp.",
     "select_account_title": "Vælg konto",
     "select_mailto_account": "Vælg hvilken konto der skal åbne dette e-mail-link.",
     "select_webcal_account": "Vælg hvilken konto der skal åbne dette kalenderlink.",
@@ -752,9 +752,9 @@
     "app_title": "Webmail",
     "reconnecting": "Forbindelse mistet. Forsøger at genoprette forbindelse…",
     "rate_limited_title": "Server-godkendelse er midlertidigt hastighedsbegrænset.",
-    "rate_limited_detail": "Inotum har sat baggrundsanmodninger på pause for at undgå udelukkelse. Prøver igen om {seconds}s.",
+    "rate_limited_detail": "__BRAND__ har sat baggrundsanmodninger på pause for at undgå udelukkelse. Prøver igen om {seconds}s.",
     "rate_limited_action_title": "Anmodning sat på pause for at undgå udelukkelse.",
-    "rate_limited_action_detail": "Inotum venter på, at serverens nedkølingsperiode slutter, før der sendes flere godkendte anmodninger. Prøv igen om {seconds}s.",
+    "rate_limited_action_detail": "__BRAND__ venter på, at serverens nedkølingsperiode slutter, før der sendes flere godkendte anmodninger. Prøv igen om {seconds}s.",
     "pull_to_refresh": "Træk for at opdatere",
     "release_to_refresh": "Slip for at opdatere",
     "refreshing": "Opdaterer…"
@@ -1857,7 +1857,7 @@
         "button": "Importér"
       },
       "about": {
-        "title": "Inotum Webmail"
+        "title": "__BRAND__ Webmail"
       }
     },
     "sidebar_apps": {
@@ -2161,9 +2161,9 @@
     "inotum": {
       "google_calendar": {
         "title": "Google Calendar",
-        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
-        "to_google_title": "Inotum → Google Calendar",
-        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "description": "See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.",
+        "to_google_title": "__BRAND__ → Google Calendar",
+        "to_google_desc": "Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
         "loading": "Loading…",
         "link_label": "Secret calendar link",
         "create": "Create my calendar link",
@@ -2172,7 +2172,7 @@
         "regenerated": "Calendar link regenerated — the old one no longer works",
         "regenerate": "Regenerate",
         "revoke": "Revoke",
-        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your __BRAND__ events.",
         "revoked": "Calendar link revoked",
         "copy": "Copy",
         "copied": "Copied",
@@ -2180,8 +2180,8 @@
         "add_manually": "Add manually (from URL)",
         "secret_warning": "Keep this link secret: it gives read access to your calendar.",
         "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
-        "from_google_title": "Google Calendar → Inotum",
-        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_title": "Google Calendar → __BRAND__",
+        "from_google_desc": "Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.",
         "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
         "open_google_settings": "Open Google Calendar settings",
         "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
@@ -3274,7 +3274,7 @@
     "start_tour": "Start rundvisning"
   },
   "demo_welcome": {
-    "title": "Velkommen til Inotum Mail",
+    "title": "Velkommen til __APP__",
     "description": "Udforsk en fuldt udstyret webmailklient - direkte i din browser. Alle data forbliver på din enhed, så du kan teste alt frit.",
     "feature_email": "Læs & skriv e-mail",
     "feature_organize": "Tags, stjerner & mapper",
@@ -3525,8 +3525,8 @@
     "demo_banner_desc": "Du er i demo-tilstand - alt forbliver i din browser. Tryk 'Nulstil demo' når som helst for at starte forfra med rent eksempeldata.",
     "quota_title": "Lagerforbrug",
     "quota_desc": "Spor din postkassestørrelse her. Cirklen fyldes op, efterhånden som du bruger mere plads.",
-    "inotum_apps_title": "Inotum tools",
-    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
+    "inotum_apps_title": "__BRAND__ tools",
+    "inotum_apps_desc": "Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "Søgning er ikke tilgængelig i den samlede visning"

@@ -5,8 +5,8 @@
  *
  * Personal, pre-filled version of the public /client-setup guide: shows the
  * exact IMAP / SMTP / CalDAV / JMAP parameters for the signed-in account (host
- * derived from the JMAP server the session is connected to, so .it users see
- * mail.inotum.it), a QR code that opens the public guide on a phone with the
+ * derived from the JMAP server the session is connected to, so users of a second
+ * domain see their own mail host), a QR code that opens the public guide on a phone with the
  * address pre-filled, and a shortcut to create an app password.
  */
 import { useEffect, useMemo, useState } from 'react';
@@ -69,7 +69,10 @@ export function deriveMailHost(serverUrl: string | null, username: string | null
     if (serverUrl) return new URL(serverUrl).hostname;
   } catch { /* fall through */ }
   const domain = username?.split('@')[1];
-  return domain ? `mail.${domain}` : 'mail.inotum.io';
+  if (domain) return `mail.${domain}`;
+  // last resort: the host we were served from, webmail.<x> -> mail.<x>
+  if (typeof window !== 'undefined') return window.location.hostname.replace(/^webmail\./, 'mail.');
+  return '';
 }
 
 export function InotumMailboxSetup() {
@@ -78,7 +81,7 @@ export function InotumMailboxSetup() {
   const address = useMemo(() => client?.getUsername() || username || '', [client, username]);
   const host = useMemo(() => deriveMailHost(serverUrl, address), [serverUrl, address]);
   const guideUrl = useMemo(() => {
-    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://webmail.inotum.io';
+    const origin = typeof window !== 'undefined' ? window.location.origin : '';
     return `${origin}/client-setup?email=${encodeURIComponent(address)}`;
   }, [address]);
   const [qr, setQr] = useState<string | null>(null);

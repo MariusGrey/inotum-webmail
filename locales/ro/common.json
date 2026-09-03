@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "Aplicații implicite",
-    "description": "Alegeți dacă linkurile către e-mail și calendar se deschid în Inotum. Din punct de vedere tehnic, Inotum se înregistrează ca gestionar de protocol pentru linkurile de tip mailto: și webcal:.",
+    "description": "Alegeți dacă linkurile către e-mail și calendar se deschid în __BRAND__. Din punct de vedere tehnic, __BRAND__ se înregistrează ca gestionar de protocol pentru linkurile de tip mailto: și webcal:.",
     "unsupported": "Acest browser sau această conexiune nu acceptă înregistrarea manuală a gestionarului de protocoale. Este posibil să puteți utiliza totuși aplicația PWA instalată prin setările browserului sau ale sistemului de operare.",
     "mailto_label": "Linkuri din e-mail",
-    "mailto_description": "Deschideți linkurile „mailto:” în Inotum cu o fereastră de redactare precompletată.",
+    "mailto_description": "Deschideți linkurile „mailto:” în __BRAND__ cu o fereastră de redactare precompletată.",
     "protocol_open_mode_label": "La deschiderea linkurilor de protocol",
-    "protocol_open_mode_description": "Alegeți dacă Inotum deschide linkurile mailto: și webcal: într-o filă nouă sau reutilizează o sesiune deschisă. Opțiunea „sesiune activă” necesită permisiunea de notificare, astfel încât să puteți face clic pe o notificare de rezervă pentru a aduce Inotum în prim-plan dacă browserul blochează focalizarea.",
+    "protocol_open_mode_description": "Alegeți dacă __BRAND__ deschide linkurile mailto: și webcal: într-o filă nouă sau reutilizează o sesiune deschisă. Opțiunea „sesiune activă” necesită permisiunea de notificare, astfel încât să puteți face clic pe o notificare de rezervă pentru a aduce __BRAND__ în prim-plan dacă browserul blochează focalizarea.",
     "protocol_open_mode_active_session": "Deschideți într-o sesiune activă, dacă este posibil",
     "protocol_open_mode_new_tab": "Deschideți întotdeauna o filă nouă",
-    "focus_notification_title": "Deschideți Inotum",
-    "focus_notification_body": "Linkul a fost deschis în Inotum. Faceți clic pentru a aduce fereastra în prim-plan.",
+    "focus_notification_title": "Deschideți __BRAND__",
+    "focus_notification_body": "Linkul a fost deschis în __BRAND__. Faceți clic pentru a aduce fereastra în prim-plan.",
     "webcal_label": "Linkuri către calendar",
-    "webcal_description": "Deschideți linkurile webcal: din Inotum cu o fereastră de dialog de abonare la calendar completată în prealabil.",
+    "webcal_description": "Deschideți linkurile webcal: din __BRAND__ cu o fereastră de dialog de abonare la calendar completată în prealabil.",
     "register_mailto": "Înregistrați aplicația de e-mail",
     "register_webcal": "Înregistrați aplicația de calendar",
     "mailto_registered": "S-a solicitat înregistrarea unui gestionar de e-mail",
@@ -166,7 +166,7 @@
     "registration_failed": "Înregistrarea gestionarului de protocol a eșuat",
     "opening_mailto": "Se deschide fereastra de redactare...",
     "opening_webcal": "Se deschide calendarul...",
-    "browser_note": "Este posibil ca browserul sau sistemul de operare să vă solicite confirmarea acestei acțiuni și să necesite instalareInotumului înainte de a putea fi selectat ca aplicație implicită.",
+    "browser_note": "Este posibil ca browserul sau sistemul de operare să vă solicite confirmarea acestei acțiuni și să necesite instalare__BRAND__ului înainte de a putea fi selectat ca aplicație implicită.",
     "select_account_title": "Alegeți contul",
     "select_mailto_account": "Alegeți contul în care să se deschidă acest link de e-mail.",
     "select_webcal_account": "Alegeți contul care ar trebui să deschidă acest link către calendar.",
@@ -752,9 +752,9 @@
     "app_title": "Webmail",
     "reconnecting": "Conexiune pierdută. Se încearcă reconectarea…",
     "rate_limited_title": "Autentificarea pe server este temporar limitată ca frecvență.",
-    "rate_limited_detail": "Inotum A suspendat solicitările de fundal pentru a evita blocarea. Se va încerca din nou în câteva {seconds} s.",
+    "rate_limited_detail": "__BRAND__ A suspendat solicitările de fundal pentru a evita blocarea. Se va încerca din nou în câteva {seconds} s.",
     "rate_limited_action_title": "Solicitarea a fost pusă în așteptare pentru a evita blocarea contului.",
-    "rate_limited_action_detail": "Inotum Așteaptă încheierea perioadei de așteptare a serverului înainte de a trimite alte cereri autentificate. Încercați din nou în câteva {seconds}.",
+    "rate_limited_action_detail": "__BRAND__ Așteaptă încheierea perioadei de așteptare a serverului înainte de a trimite alte cereri autentificate. Încercați din nou în câteva {seconds}.",
     "pull_to_refresh": "Trageți pentru a reîmprospăta",
     "release_to_refresh": "Eliberați pentru a reîmprospăta",
     "refreshing": "Se reîmprospătează…"
@@ -1861,7 +1861,7 @@
         "button": "Import"
       },
       "about": {
-        "title": "Inotum Webmail"
+        "title": "__BRAND__ Webmail"
       }
     },
     "sidebar_apps": {
@@ -2161,9 +2161,9 @@
     "inotum": {
       "google_calendar": {
         "title": "Google Calendar",
-        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
-        "to_google_title": "Inotum → Google Calendar",
-        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "description": "See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.",
+        "to_google_title": "__BRAND__ → Google Calendar",
+        "to_google_desc": "Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
         "loading": "Loading…",
         "link_label": "Secret calendar link",
         "create": "Create my calendar link",
@@ -2172,7 +2172,7 @@
         "regenerated": "Calendar link regenerated — the old one no longer works",
         "regenerate": "Regenerate",
         "revoke": "Revoke",
-        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your __BRAND__ events.",
         "revoked": "Calendar link revoked",
         "copy": "Copy",
         "copied": "Copied",
@@ -2180,8 +2180,8 @@
         "add_manually": "Add manually (from URL)",
         "secret_warning": "Keep this link secret: it gives read access to your calendar.",
         "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
-        "from_google_title": "Google Calendar → Inotum",
-        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_title": "Google Calendar → __BRAND__",
+        "from_google_desc": "Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.",
         "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
         "open_google_settings": "Open Google Calendar settings",
         "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
@@ -3274,7 +3274,7 @@
     "start_tour": "Începe turul"
   },
   "demo_welcome": {
-    "title": "Bine ați venit la Inotum Mail",
+    "title": "Bine ați venit la __APP__",
     "description": "Explorați un client de e-mail web cu funcționalități complete – direct în browserul dvs. Toate datele rămân pe dispozitivul dvs., așa că nu ezitați să testați totul.",
     "feature_email": "Citiți și redactați e-mailuri",
     "feature_organize": "Etichete, stele și dosare",
@@ -3525,8 +3525,8 @@
     "demo_banner_desc": "Vă aflați în modul demo – totul rămâne în browserul dvs. Apăsați „Resetare demo” oricând pentru a începe de la zero cu date de exemplu curate.",
     "quota_title": "Utilizarea spațiului de stocare",
     "quota_desc": "Urmăriți aici dimensiunea căsuței dvs. de e-mail. Cercul se umple pe măsură ce utilizați mai mult spațiu.",
-    "inotum_apps_title": "Inotum tools",
-    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
+    "inotum_apps_title": "__BRAND__ tools",
+    "inotum_apps_desc": "Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "Funcția de căutare nu este disponibilă în vizualizarea unificată"

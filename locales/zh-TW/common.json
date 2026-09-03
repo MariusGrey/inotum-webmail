@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "預設應用程式",
-    "description": "選擇電子郵件與行事曆連結是否要在 Inotum 開啟。Inotum 會註冊為 mailto: 與 webcal: 連結的通訊協定處理常式。",
+    "description": "選擇電子郵件與行事曆連結是否要在 __BRAND__ 開啟。__BRAND__ 會註冊為 mailto: 與 webcal: 連結的通訊協定處理常式。",
     "unsupported": "此瀏覽器或連線不支援手動註冊通訊協定處理常式。您仍可嘗試透過瀏覽器或作業系統設定，使用已安裝的 PWA。",
     "mailto_label": "電子郵件連結",
-    "mailto_description": "使用預先填入的撰寫視窗，在 Inotum 開啟 mailto: 連結。",
+    "mailto_description": "使用預先填入的撰寫視窗，在 __BRAND__ 開啟 mailto: 連結。",
     "protocol_open_mode_label": "開啟通訊協定連結時",
-    "protocol_open_mode_description": "選擇 Inotum 要在新分頁開啟 mailto: 與 webcal: 連結，或使用現有的工作階段。現有工作階段選項需要通知權限；若瀏覽器阻止視窗取得焦點，您可以點擊備用通知，將 Inotum 移到最上層。",
+    "protocol_open_mode_description": "選擇 __BRAND__ 要在新分頁開啟 mailto: 與 webcal: 連結，或使用現有的工作階段。現有工作階段選項需要通知權限；若瀏覽器阻止視窗取得焦點，您可以點擊備用通知，將 __BRAND__ 移到最上層。",
     "protocol_open_mode_active_session": "盡可能在現有工作階段開啟",
     "protocol_open_mode_new_tab": "一律開啟新分頁",
-    "focus_notification_title": "開啟 Inotum",
-    "focus_notification_body": "連結已在 Inotum 開啟。點擊即可將視窗移到最上層。",
+    "focus_notification_title": "開啟 __BRAND__",
+    "focus_notification_body": "連結已在 __BRAND__ 開啟。點擊即可將視窗移到最上層。",
     "webcal_label": "行事曆連結",
-    "webcal_description": "使用預先填入的行事曆訂閱對話方塊，在 Inotum 開啟 webcal: 連結。",
+    "webcal_description": "使用預先填入的行事曆訂閱對話方塊，在 __BRAND__ 開啟 webcal: 連結。",
     "register_mailto": "註冊電子郵件應用程式",
     "register_webcal": "註冊行事曆應用程式",
     "mailto_registered": "已要求註冊電子郵件處理常式",
@@ -166,7 +166,7 @@
     "registration_failed": "通訊協定處理常式註冊失敗",
     "opening_mailto": "正在開啟撰寫視窗…",
     "opening_webcal": "正在開啟行事曆…",
-    "browser_note": "您的瀏覽器或作業系統可能會要求您確認，而且可能必須先安裝 Inotum，才能選為預設應用程式。",
+    "browser_note": "您的瀏覽器或作業系統可能會要求您確認，而且可能必須先安裝 __BRAND__，才能選為預設應用程式。",
     "select_account_title": "選擇帳號",
     "select_mailto_account": "選擇用於開啟此電子郵件連結的帳號。",
     "select_webcal_account": "選擇用於開啟此行事曆連結的帳號。",
@@ -749,9 +749,9 @@
     "app_title": "網頁郵件",
     "reconnecting": "連線中斷，正在嘗試重新連線…",
     "rate_limited_title": "伺服器驗證目前受到速率限制。",
-    "rate_limited_detail": "Inotum 已暫停背景請求，以免帳號遭鎖定。將在 {seconds} 秒後重試。",
+    "rate_limited_detail": "__BRAND__ 已暫停背景請求，以免帳號遭鎖定。將在 {seconds} 秒後重試。",
     "rate_limited_action_title": "已暫停請求，以免帳號遭鎖定。",
-    "rate_limited_action_detail": "Inotum 正在等待伺服器的冷卻時間結束，再傳送更多需要驗證的請求。請在 {seconds} 秒後重試。",
+    "rate_limited_action_detail": "__BRAND__ 正在等待伺服器的冷卻時間結束，再傳送更多需要驗證的請求。請在 {seconds} 秒後重試。",
     "pull_to_refresh": "下拉重新整理",
     "release_to_refresh": "鬆開重新整理",
     "refreshing": "正在重新整理…"
@@ -1858,7 +1858,7 @@
         "button": "匯入"
       },
       "about": {
-        "title": "Inotum 網頁郵件"
+        "title": "__BRAND__ 網頁郵件"
       }
     },
     "sidebar_apps": {
@@ -2156,9 +2156,9 @@
     "inotum": {
       "google_calendar": {
         "title": "Google Calendar",
-        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
-        "to_google_title": "Inotum → Google Calendar",
-        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "description": "See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.",
+        "to_google_title": "__BRAND__ → Google Calendar",
+        "to_google_desc": "Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
         "loading": "Loading…",
         "link_label": "Secret calendar link",
         "create": "Create my calendar link",
@@ -2167,7 +2167,7 @@
         "regenerated": "Calendar link regenerated — the old one no longer works",
         "regenerate": "Regenerate",
         "revoke": "Revoke",
-        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your __BRAND__ events.",
         "revoked": "Calendar link revoked",
         "copy": "Copy",
         "copied": "Copied",
@@ -2175,8 +2175,8 @@
         "add_manually": "Add manually (from URL)",
         "secret_warning": "Keep this link secret: it gives read access to your calendar.",
         "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
-        "from_google_title": "Google Calendar → Inotum",
-        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_title": "Google Calendar → __BRAND__",
+        "from_google_desc": "Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.",
         "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
         "open_google_settings": "Open Google Calendar settings",
         "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
@@ -3269,7 +3269,7 @@
     "start_tour": "開始功能導覽"
   },
   "demo_welcome": {
-    "title": "歡迎使用 Inotum Mail",
+    "title": "歡迎使用 __APP__",
     "description": "直接在瀏覽器中探索功能完整的網頁郵件用戶端。所有資料都保留在您的裝置上，請自由測試各項功能。",
     "feature_email": "閱讀與撰寫郵件",
     "feature_organize": "標籤、星號與信件匣",
@@ -3520,8 +3520,8 @@
     "demo_banner_desc": "目前處於示範模式，所有資料都保留在瀏覽器中。隨時點擊「重設示範」即可用全新的範例資料重新開始。",
     "quota_title": "儲存使用情況",
     "quota_desc": "在這裡查看信箱的儲存空間使用量。使用的空間越多，圓形指示器就會填得越滿。",
-    "inotum_apps_title": "Inotum tools",
-    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
+    "inotum_apps_title": "__BRAND__ tools",
+    "inotum_apps_desc": "Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "整合檢視中無法使用搜尋"

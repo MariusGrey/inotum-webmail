@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "برنامه‌های پیش‌فرض",
-    "description": "انتخاب کنید لینک‌های ایمیل و تقویم در Inotum باز شوند.",
+    "description": "انتخاب کنید لینک‌های ایمیل و تقویم در __BRAND__ باز شوند.",
     "unsupported": "این مرورگر از ثبت دستی پروتکل پشتیبانی نمی‌کند.",
     "mailto_label": "لینک‌های ایمیل",
-    "mailto_description": "باز کردن لینک‌های mailto: در Inotum",
+    "mailto_description": "باز کردن لینک‌های mailto: در __BRAND__",
     "protocol_open_mode_label": "هنگام باز کردن لینک‌های پروتکل",
     "protocol_open_mode_description": "انتخاب کنید لینک‌ها در تب جدید باز شوند یا نشست فعال.",
     "protocol_open_mode_active_session": "باز کردن در نشست فعال",
     "protocol_open_mode_new_tab": "همیشه در تب جدید",
-    "focus_notification_title": "باز کردن Inotum",
-    "focus_notification_body": "لینک در Inotum باز شد.",
+    "focus_notification_title": "باز کردن __BRAND__",
+    "focus_notification_body": "لینک در __BRAND__ باز شد.",
     "webcal_label": "لینک‌های تقویم",
-    "webcal_description": "باز کردن لینک‌های webcal: در Inotum",
+    "webcal_description": "باز کردن لینک‌های webcal: در __BRAND__",
     "register_mailto": "ثبت برنامه ایمیل",
     "register_webcal": "ثبت برنامه تقویم",
     "mailto_registered": "ثبت مدیریت ایمیل درخواست شد",
@@ -752,9 +752,9 @@
     "app_title": "ایمیل تحت وب",
     "reconnecting": "ارتباط قطع شد. در حال تلاش برای اتصال مجدد…",
     "rate_limited_title": "احراز هویت سرور موقتاً محدود شده است.",
-    "rate_limited_detail": "Inotum درخواست‌های پس‌زمینه را متوقف کرده است. تلاش مجدد در {seconds} ثانیه.",
+    "rate_limited_detail": "__BRAND__ درخواست‌های پس‌زمینه را متوقف کرده است. تلاش مجدد در {seconds} ثانیه.",
     "rate_limited_action_title": "درخواست برای جلوگیری از قفل متوقف شد.",
-    "rate_limited_action_detail": "Inotum منتظر پایان زمان انتظار سرور است. در {seconds} ثانیه دوباره تلاش کنید.",
+    "rate_limited_action_detail": "__BRAND__ منتظر پایان زمان انتظار سرور است. در {seconds} ثانیه دوباره تلاش کنید.",
     "pull_to_refresh": "برای تازه‌سازی بکشید",
     "release_to_refresh": "برای تازه‌سازی رها کنید",
     "refreshing": "در حال تازه‌سازی…"
@@ -1861,7 +1861,7 @@
         "button": "وارد کردن"
       },
       "about": {
-        "title": "Inotum Webmail"
+        "title": "__BRAND__ Webmail"
       }
     },
     "sidebar_apps": {
@@ -2161,9 +2161,9 @@
     "inotum": {
       "google_calendar": {
         "title": "Google Calendar",
-        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
-        "to_google_title": "Inotum → Google Calendar",
-        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "description": "See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.",
+        "to_google_title": "__BRAND__ → Google Calendar",
+        "to_google_desc": "Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
         "loading": "Loading…",
         "link_label": "Secret calendar link",
         "create": "Create my calendar link",
@@ -2172,7 +2172,7 @@
         "regenerated": "Calendar link regenerated — the old one no longer works",
         "regenerate": "Regenerate",
         "revoke": "Revoke",
-        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your __BRAND__ events.",
         "revoked": "Calendar link revoked",
         "copy": "Copy",
         "copied": "Copied",
@@ -2180,8 +2180,8 @@
         "add_manually": "Add manually (from URL)",
         "secret_warning": "Keep this link secret: it gives read access to your calendar.",
         "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
-        "from_google_title": "Google Calendar → Inotum",
-        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_title": "Google Calendar → __BRAND__",
+        "from_google_desc": "Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.",
         "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
         "open_google_settings": "Open Google Calendar settings",
         "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
@@ -3274,7 +3274,7 @@
     "start_tour": "شروع تور"
   },
   "demo_welcome": {
-    "title": "به Inotum Mail خوش آمدید",
+    "title": "به __APP__ خوش آمدید",
     "description": "یک سرویس ایمیل کامل را در مرورگر خود کاوش کنید.",
     "feature_email": "خواندن و نوشتن ایمیل",
     "feature_organize": "برچسب‌ها، ستاره‌ها و پوشه‌ها",
@@ -3525,8 +3525,8 @@
     "demo_banner_desc": "شما در حالت آزمایشی هستید. هر زمان \"بازنشانی نسخه آزمایشی\" را بزنید.",
     "quota_title": "مصرف فضا",
     "quota_desc": "مصرف صندوق پستی خود را اینجا پیگیری کنید.",
-    "inotum_apps_title": "Inotum tools",
-    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
+    "inotum_apps_title": "__BRAND__ tools",
+    "inotum_apps_desc": "Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "جستجو در نمای یکپارچه در دسترس نیست"

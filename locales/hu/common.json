@@ -147,18 +147,18 @@
   },
   "protocol_handlers": {
     "title": "Alapértelmezett alkalmazások",
-    "description": "Válaszd ki, hogy az e-mail és naptár hivatkozások a Inotumban nyíljanak meg. Technikailag a Inotum protokollkezelőként regisztrálja magát a mailto: és webcal: hivatkozásokhoz.",
+    "description": "Válaszd ki, hogy az e-mail és naptár hivatkozások a __BRAND__ban nyíljanak meg. Technikailag a __BRAND__ protokollkezelőként regisztrálja magát a mailto: és webcal: hivatkozásokhoz.",
     "unsupported": "Ez a böngésző vagy kapcsolat nem támogatja a kézi protokollkezelő regisztrációt. Lehetőség lehet a telepített PWA használatára a böngésző vagy operációs rendszer beállításain keresztül.",
     "mailto_label": "E-mail hivatkozások",
-    "mailto_description": "Mailto: hivatkozások megnyitása a Inotumban egy előre kitöltött szerkesztővel.",
+    "mailto_description": "Mailto: hivatkozások megnyitása a __BRAND__ban egy előre kitöltött szerkesztővel.",
     "protocol_open_mode_label": "Protokoll hivatkozások megnyitásakor",
-    "protocol_open_mode_description": "Válaszd ki, hogy a Inotum a mailto: és webcal: hivatkozásokat új lapon vagy a meglévő munkamenetben nyissa meg. Az aktív munkamenet opcióhoz értesítési engedély szükséges, hogy egy értesítésre kattintva előtérbe hozd a Inotumot, ha a böngésző blokkolja a fókuszt.",
+    "protocol_open_mode_description": "Válaszd ki, hogy a __BRAND__ a mailto: és webcal: hivatkozásokat új lapon vagy a meglévő munkamenetben nyissa meg. Az aktív munkamenet opcióhoz értesítési engedély szükséges, hogy egy értesítésre kattintva előtérbe hozd a __BRAND__ot, ha a böngésző blokkolja a fókuszt.",
     "protocol_open_mode_active_session": "Megnyitás aktív munkamenetben, ha lehetséges",
     "protocol_open_mode_new_tab": "Mindig új lapon nyisson",
-    "focus_notification_title": "Inotum megnyitása",
-    "focus_notification_body": "A hivatkozás megnyílt a Inotumban. Kattints az ablak előtérbe hozásához.",
+    "focus_notification_title": "__BRAND__ megnyitása",
+    "focus_notification_body": "A hivatkozás megnyílt a __BRAND__ban. Kattints az ablak előtérbe hozásához.",
     "webcal_label": "Naptár hivatkozások",
-    "webcal_description": "Webcal: hivatkozások megnyitása a Inotumban egy előre kitöltött naptárfeliratkozási párbeszédpanellel.",
+    "webcal_description": "Webcal: hivatkozások megnyitása a __BRAND__ban egy előre kitöltött naptárfeliratkozási párbeszédpanellel.",
     "register_mailto": "E-mail alkalmazás regisztrálása",
     "register_webcal": "Naptár alkalmazás regisztrálása",
     "mailto_registered": "E-mail kezelő regisztráció kérve",
@@ -166,7 +166,7 @@
     "registration_failed": "Protokollkezelő regisztráció sikertelen",
     "opening_mailto": "Szerkesztő megnyitása...",
     "opening_webcal": "Naptár megnyitása...",
-    "browser_note": "A böngésző vagy operációs rendszered megerősítést kérhet, és előfordulhat, hogy a Inotumot telepíteni kell, mielőtt alapértelmezett alkalmazásként kiválasztható.",
+    "browser_note": "A böngésző vagy operációs rendszered megerősítést kérhet, és előfordulhat, hogy a __BRAND__ot telepíteni kell, mielőtt alapértelmezett alkalmazásként kiválasztható.",
     "select_account_title": "Fiók kiválasztása",
     "select_mailto_account": "Válaszd ki, melyik fiók nyissa meg ezt az e-mail hivatkozást.",
     "select_webcal_account": "Válaszd ki, melyik fiók nyissa meg ezt a naptár hivatkozást.",
@@ -752,9 +752,9 @@
     "app_title": "Webmail",
     "reconnecting": "Kapcsolat megszakadt. Újracsatlakozás...",
     "rate_limited_title": "A szerver hitelesítés átmenetileg korlátozva van.",
-    "rate_limited_detail": "A Inotum szüneteltette a háttérkéréseket a lezárás elkerülése érdekében. Újrapróbálkozás {seconds} másodperc múlva.",
+    "rate_limited_detail": "A __BRAND__ szüneteltette a háttérkéréseket a lezárás elkerülése érdekében. Újrapróbálkozás {seconds} másodperc múlva.",
     "rate_limited_action_title": "Kérés szüneteltetve a lezárás elkerülése érdekében.",
-    "rate_limited_action_detail": "A Inotum várja a szerver lehűlését, mielőtt további hitelesített kéréseket küldene. Próbáld újra {seconds} másodperc múlva.",
+    "rate_limited_action_detail": "A __BRAND__ várja a szerver lehűlését, mielőtt további hitelesített kéréseket küldene. Próbáld újra {seconds} másodperc múlva.",
     "pull_to_refresh": "Húzza le a frissítéshez",
     "release_to_refresh": "Engedje el a frissítéshez",
     "refreshing": "Frissítés…"
@@ -1857,7 +1857,7 @@
         "button": "Importálás"
       },
       "about": {
-        "title": "Inotum Webmail"
+        "title": "__BRAND__ Webmail"
       }
     },
     "sidebar_apps": {
@@ -2161,9 +2161,9 @@
     "inotum": {
       "google_calendar": {
         "title": "Google Calendar",
-        "description": "See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.",
-        "to_google_title": "Inotum → Google Calendar",
-        "to_google_desc": "Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
+        "description": "See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.",
+        "to_google_title": "__BRAND__ → Google Calendar",
+        "to_google_desc": "Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).",
         "loading": "Loading…",
         "link_label": "Secret calendar link",
         "create": "Create my calendar link",
@@ -2172,7 +2172,7 @@
         "regenerated": "Calendar link regenerated — the old one no longer works",
         "regenerate": "Regenerate",
         "revoke": "Revoke",
-        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your Inotum events.",
+        "revoke_confirm": "Revoke the link? Google Calendar will stop receiving your __BRAND__ events.",
         "revoked": "Calendar link revoked",
         "copy": "Copy",
         "copied": "Copied",
@@ -2180,8 +2180,8 @@
         "add_manually": "Add manually (from URL)",
         "secret_warning": "Keep this link secret: it gives read access to your calendar.",
         "refresh_note": "The link is refreshed every 30 minutes. New links may take a few minutes before they show data.",
-        "from_google_title": "Google Calendar → Inotum",
-        "from_google_desc": "Subscribe to your Google calendar from Inotum. Events stay editable on Google only.",
+        "from_google_title": "Google Calendar → __BRAND__",
+        "from_google_desc": "Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.",
         "from_google_step1": "Open Google Calendar settings and pick the calendar to share.",
         "open_google_settings": "Open Google Calendar settings",
         "from_google_step2": "Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).",
@@ -3274,7 +3274,7 @@
     "start_tour": "Bemutató indítása"
   },
   "demo_welcome": {
-    "title": "Üdvözlünk a Inotum Mail-ben",
+    "title": "Üdvözlünk a __APP__-ben",
     "description": "Fedezz fel egy teljes funkciókkal rendelkező webmail klienst - közvetlenül a böngésződben. Az összes adat az eszközödön marad, nyugodtan tesztelj mindent.",
     "feature_email": "E-mailek olvasása és írása",
     "feature_organize": "Címkék, csillagok és mappák",
@@ -3525,8 +3525,8 @@
     "demo_banner_desc": "Demó módban vagy - minden a böngésződben marad. Nyomd meg a 'Demó visszaállítása' gombot bármikor a tiszta mintaadatokkal való újrakezdéshez.",
     "quota_title": "Tárhely használat",
     "quota_desc": "Kövesd nyomon a postafiókod méretét itt. A kör kitöltődik, ahogy egyre több helyet használsz.",
-    "inotum_apps_title": "Inotum tools",
-    "inotum_apps_desc": "Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices."
+    "inotum_apps_title": "__BRAND__ tools",
+    "inotum_apps_desc": "Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices."
   },
   "unified_mailbox": {
     "search_unavailable": "A keresés nem érhető el az egységes nézetben"

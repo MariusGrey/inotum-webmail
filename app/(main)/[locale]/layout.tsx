@@ -13,6 +13,8 @@ import { PluginConsentDialog } from "@/components/plugins/plugin-consent-dialog"
 import { PWAInstallPrompt } from "@/components/pwa-install-prompt";
 import { PushNotificationPrompt } from "@/components/push-notification-prompt";
 import { locales } from "@/i18n/routing";
+import { applyBrand } from "@/i18n/brand";
+import { resolveBrandNames } from "@/i18n/brand-server";
 
 export default async function LocaleLayout({
   children,
@@ -31,6 +33,9 @@ export default async function LocaleLayout({
   } catch {
     notFound();
   }
+  // Inotum: brand tokens resolved on the server, so the first client render
+  // matches the SSR output (the provider re-applies them to lazy catalogs).
+  messages = applyBrand(messages, await resolveBrandNames());
 
   return (
     <IntlProvider locale={locale} messages={messages}>

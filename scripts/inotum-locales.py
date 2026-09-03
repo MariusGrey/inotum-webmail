@@ -2,9 +2,11 @@
 """
 Inotum fork — locale patch.
 
-1. Rebrands the product name in the UI strings (Bulwark → Inotum) for every
-   locale, except the strings that talk about *real* Bulwark products the
-   fork still relies on (the hosted push relay and the Bulwark mobile app).
+1. Replaces the product name in the UI strings (Bulwark → the runtime tokens
+   __APP__ / __BRAND__, see i18n/brand.ts) for every locale, except the strings
+   that talk about *real* Bulwark products the fork still relies on (the hosted
+   push relay and the Bulwark mobile app). The instance's APP_NAME and
+   LOGIN_COMPANY_NAME fill the tokens at runtime: no brand lives in the code.
 2. Adds the Inotum-specific strings (settings.inotum.*, settings.tabs.inotum_setup,
    tour.inotum_*) to `en` and `it`; every other locale falls back to English
    through i18n/merge-messages.ts.
@@ -22,6 +24,14 @@ REBRAND_PREFIXES = (
     'common.rate_limited_',
     'demo_welcome.title',
     'settings.advanced.about.title',
+    'settings.inotum.',
+    'tour.inotum_',
+)
+APP, BRAND = '__APP__', '__BRAND__'
+RULES = (
+    ('Bulwark Webmail', BRAND + ' Webmail'), ('Bulwark Mail', APP), ('Bulwark', BRAND),
+    # catalogs written by the previous version of this script
+    ('Inotum Webmail', BRAND + ' Webmail'), ('Inotum Mail', APP), ('Inotum', BRAND),
 )
 KEEP_BULWARK = (
     'settings.notifications.push.',     # hosted Bulwark push relay
@@ -35,9 +45,9 @@ EXTRA = {
             'inotum': {
                 'google_calendar': {
                     'title': 'Google Calendar',
-                    'description': 'See your Inotum events in Google Calendar and your Google events in Inotum, in read-only mode, without installing anything.',
-                    'to_google_title': 'Inotum → Google Calendar',
-                    'to_google_desc': 'Create a secret link to your Inotum calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).',
+                    'description': 'See your __BRAND__ events in Google Calendar and your Google events in __BRAND__, in read-only mode, without installing anything.',
+                    'to_google_title': '__BRAND__ → Google Calendar',
+                    'to_google_desc': 'Create a secret link to your __BRAND__ calendars and add it to Google Calendar. Google refreshes it on its own (it can take up to 12–24 hours).',
                     'loading': 'Loading…',
                     'link_label': 'Secret calendar link',
                     'create': 'Create my calendar link',
@@ -46,7 +56,7 @@ EXTRA = {
                     'regenerated': 'Calendar link regenerated — the old one no longer works',
                     'regenerate': 'Regenerate',
                     'revoke': 'Revoke',
-                    'revoke_confirm': 'Revoke the link? Google Calendar will stop receiving your Inotum events.',
+                    'revoke_confirm': 'Revoke the link? Google Calendar will stop receiving your __BRAND__ events.',
                     'revoked': 'Calendar link revoked',
                     'copy': 'Copy',
                     'copied': 'Copied',
@@ -54,8 +64,8 @@ EXTRA = {
                     'add_manually': 'Add manually (from URL)',
                     'secret_warning': 'Keep this link secret: it gives read access to your calendar.',
                     'refresh_note': 'The link is refreshed every 30 minutes. New links may take a few minutes before they show data.',
-                    'from_google_title': 'Google Calendar → Inotum',
-                    'from_google_desc': 'Subscribe to your Google calendar from Inotum. Events stay editable on Google only.',
+                    'from_google_title': 'Google Calendar → __BRAND__',
+                    'from_google_desc': 'Subscribe to your Google calendar from __BRAND__. Events stay editable on Google only.',
                     'from_google_step1': 'Open Google Calendar settings and pick the calendar to share.',
                     'open_google_settings': 'Open Google Calendar settings',
                     'from_google_step2': 'Scroll to “Integrate calendar” and copy the “Secret address in iCal format” (ends with .ics).',
@@ -90,8 +100,8 @@ EXTRA = {
             },
         },
         'tour': {
-            'inotum_apps_title': 'Inotum tools',
-            'inotum_apps_desc': 'Here you find the Inotum shortcuts: sync with Google Calendar and set up your mailbox on other devices.',
+            'inotum_apps_title': '__BRAND__ tools',
+            'inotum_apps_desc': 'Here you find the __BRAND__ shortcuts: sync with Google Calendar and set up your mailbox on other devices.',
         },
     },
     'it': {
@@ -100,9 +110,9 @@ EXTRA = {
             'inotum': {
                 'google_calendar': {
                     'title': 'Google Calendar',
-                    'description': 'Vedi gli eventi Inotum dentro Google Calendar e gli eventi Google dentro Inotum, in sola lettura, senza installare nulla.',
-                    'to_google_title': 'Inotum → Google Calendar',
-                    'to_google_desc': 'Crea un link segreto ai tuoi calendari Inotum e aggiungilo a Google Calendar. Google lo aggiorna da solo (può impiegare fino a 12–24 ore).',
+                    'description': 'Vedi gli eventi __BRAND__ dentro Google Calendar e gli eventi Google dentro __BRAND__, in sola lettura, senza installare nulla.',
+                    'to_google_title': '__BRAND__ → Google Calendar',
+                    'to_google_desc': 'Crea un link segreto ai tuoi calendari __BRAND__ e aggiungilo a Google Calendar. Google lo aggiorna da solo (può impiegare fino a 12–24 ore).',
                     'loading': 'Caricamento…',
                     'link_label': 'Link segreto del calendario',
                     'create': 'Crea il mio link calendario',
@@ -111,7 +121,7 @@ EXTRA = {
                     'regenerated': 'Link calendario rigenerato: quello vecchio non funziona più',
                     'regenerate': 'Rigenera',
                     'revoke': 'Revoca',
-                    'revoke_confirm': 'Revocare il link? Google Calendar smetterà di ricevere i tuoi eventi Inotum.',
+                    'revoke_confirm': 'Revocare il link? Google Calendar smetterà di ricevere i tuoi eventi __BRAND__.',
                     'revoked': 'Link calendario revocato',
                     'copy': 'Copia',
                     'copied': 'Copiato',
@@ -119,8 +129,8 @@ EXTRA = {
                     'add_manually': 'Aggiungi manualmente (da URL)',
                     'secret_warning': 'Tieni segreto questo link: dà accesso in lettura al tuo calendario.',
                     'refresh_note': 'Il link si aggiorna ogni 30 minuti. Un link appena creato può impiegare qualche minuto prima di mostrare i dati.',
-                    'from_google_title': 'Google Calendar → Inotum',
-                    'from_google_desc': 'Sottoscrivi il tuo calendario Google da Inotum. Gli eventi restano modificabili solo su Google.',
+                    'from_google_title': 'Google Calendar → __BRAND__',
+                    'from_google_desc': 'Sottoscrivi il tuo calendario Google da __BRAND__. Gli eventi restano modificabili solo su Google.',
                     'from_google_step1': 'Apri le impostazioni di Google Calendar e scegli il calendario da condividere.',
                     'open_google_settings': 'Apri impostazioni Google Calendar',
                     'from_google_step2': 'Scorri fino a «Integra il calendario» e copia l’«Indirizzo segreto in formato iCal» (finisce con .ics).',
@@ -155,8 +165,8 @@ EXTRA = {
             },
         },
         'tour': {
-            'inotum_apps_title': 'Strumenti Inotum',
-            'inotum_apps_desc': 'Qui trovi le scorciatoie Inotum: sincronizza Google Calendar e configura la tua casella sugli altri dispositivi.',
+            'inotum_apps_title': 'Strumenti __BRAND__',
+            'inotum_apps_desc': 'Qui trovi le scorciatoie __BRAND__: sincronizza Google Calendar e configura la tua casella sugli altri dispositivi.',
         },
     },
 }
@@ -168,8 +178,10 @@ def rebrand(obj, path=''):
         for k, v in obj.items():
             p = f'{path}.{k}' if path else k
             if isinstance(v, str):
-                if 'Bulwark' in v and p.startswith(REBRAND_PREFIXES) and not p.startswith(KEEP_BULWARK):
-                    nv = v.replace('Bulwark Webmail', 'Inotum Webmail').replace('Bulwark Mail', 'Inotum Mail').replace('Bulwark', 'Inotum')
+                if ('Bulwark' in v or 'Inotum' in v) and p.startswith(REBRAND_PREFIXES) and not p.startswith(KEEP_BULWARK):
+                    nv = v
+                    for old, new in RULES:
+                        nv = nv.replace(old, new)
                     if nv != v:
                         obj[k] = nv
                         changed += 1
