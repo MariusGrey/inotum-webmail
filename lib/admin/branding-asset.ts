@@ -51,6 +51,14 @@ async function fetchRemoteAsset(url: string, label: string): Promise<Buffer> {
  * `label` only shapes the error message for remote fetch failures.
  */
 export async function fetchBrandingAsset(url: string, label = 'branding asset'): Promise<Buffer> {
+  // Inotum: data URL (logo del dominio caricato dalla console e salvato in x:Domain.logo)
+  if (url.startsWith('data:')) {
+    const comma = url.indexOf(',');
+    if (comma < 0) throw new Error(`Invalid data URL for ${label}`);
+    const meta = url.slice(5, comma);
+    const payload = url.slice(comma + 1);
+    return meta.endsWith(';base64') ? Buffer.from(payload, 'base64') : Buffer.from(decodeURIComponent(payload), 'utf8');
+  }
   // Absolute URL (http/https)
   if (url.startsWith('http://') || url.startsWith('https://')) {
     return fetchRemoteAsset(url, label);
