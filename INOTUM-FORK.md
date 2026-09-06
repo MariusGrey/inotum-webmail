@@ -3,7 +3,7 @@
 Fork di [bulwarkmail/webmail](https://github.com/bulwarkmail/webmail) (AGPL-3.0), la webmail
 JMAP usata da **Inotum Mail**. Base: **v1.9.2**, la stessa versione in produzione.
 
-## Stato: IN PRODUZIONE (immagine `nexus-webmail:1.9.2-nexus.9`, prima `inotum-webmail:1.9.2-inotum.8`)
+## Stato: IN PRODUZIONE (immagine `nexus-webmail:1.9.2-nexus.10`)
 
 Base: `bulwarkmail/webmail` main (v1.9.2 + #931). Prima motivazione del fork: l'immagine
 ufficiale pinnata era piu' vecchia del sorgente e non conteneva le app sidebar
@@ -76,3 +76,11 @@ o chiunque altro.
 
 Il namespace `inotum` nei nomi di file, route (`/api/inotum/*`), store (`/app/data/inotum`)
 e chiavi di traduzione (`settings.inotum.*`) e' un identificatore interno del fork e resta.
+
+## 1.9.2-nexus.10 (2026-09-06) — logo per dominio dalla console Stalwart
+
+| Area | File | Cosa fa |
+| --- | --- | --- |
+| Brand per dominio | `lib/inotum/domain-brand.ts`, `lib/inotum/resolve-branding.ts` | L'host della richiesta (`webmail.<dominio>`) viene abbinato ai domini di Stalwart (letti con una chiave API di sola lettura, `INOTUM_STALWART_URL` + `INOTUM_STALWART_API_KEY`, cache 60 s, timeout 3 s, mai bloccante). Se il dominio ha un `logo` (campo "Logo" in Management → Domains), quel logo diventa logo di login, logo della barra, favicon e icona PWA per quell'host. `DOMAIN_BRANDING` e `APP_NAME` restano per nome, colori e link, e un valore esplicito li' vince sempre. Senza chiave: tutto come prima. |
+| Punti di risoluzione | `app/api/config/route.ts`, `app/(main)/layout.tsx`, `app/manifest.ts`, `app/api/pwa-icon`, `app/api/og-image`, `app/api/pwa-screenshot` | Tutti passano da `resolveDomainOverrides(host)`. |
+| Test | `lib/inotum/__tests__/domain-brand.test.ts` | Abbinamento host→dominio (alias, porta, maiuscole), override dal logo, precedenza di DOMAIN_BRANDING. |

@@ -2,11 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import sharp from 'sharp';
 import { configManager } from '@/lib/admin/config-manager';
 import { fetchBrandingAsset } from '@/lib/admin/branding-asset';
-import {
-  matchDomainBranding,
-  parseDomainBranding,
-  pickRequestHost,
-} from '@/lib/admin/domain-branding';
+import { pickRequestHost } from '@/lib/admin/domain-branding';
+import { resolveDomainOverrides } from '@/lib/inotum/resolve-branding';
 
 /**
  * Link-preview (OpenGraph / Twitter card) image.
@@ -69,10 +66,7 @@ export async function GET(req: NextRequest) {
   await configManager.ensureLoaded();
 
   const host = pickRequestHost(req);
-  const domainOverrides = matchDomainBranding(
-    host,
-    parseDomainBranding(configManager.get<unknown>('domainBranding', [])),
-  );
+  const domainOverrides = await resolveDomainOverrides(host);
   const sources = configManager.getAllWithSources();
   /** Configured value for `key`, ignoring built-in defaults (those are placeholders, not branding). */
   const configured = (key: keyof typeof domainOverrides): string => {

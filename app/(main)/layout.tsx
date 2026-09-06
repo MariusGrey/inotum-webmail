@@ -7,12 +7,8 @@ import { ServiceWorkerRegistration } from "@/components/service-worker-registrat
 import { FaviconBadge } from "@/components/favicon-badge";
 import { ThemeColorSync } from "@/components/theme-color-sync";
 import { configManager } from "@/lib/admin/config-manager";
-import {
-  matchDomainBranding,
-  parseDomainBranding,
-  pickRequestHost,
-  type BrandingOverrideKey,
-} from "@/lib/admin/domain-branding";
+import { pickRequestHost, type BrandingOverrideKey } from "@/lib/admin/domain-branding";
+import { resolveDomainOverrides } from "@/lib/inotum/resolve-branding";
 import { withBasePath } from "@/lib/browser-navigation";
 import { locales } from "@/i18n/routing";
 import "../globals.css";
@@ -43,10 +39,7 @@ const geistMono = Geist_Mono({
 // then the global admin/env/default value (same precedence as app/manifest.ts).
 async function brandedValue(key: BrandingOverrideKey, fallback: string): Promise<string> {
   const host = pickRequestHost(await headers());
-  const override = matchDomainBranding(
-    host,
-    parseDomainBranding(configManager.get<unknown>("domainBranding", [])),
-  )[key];
+  const override = (await resolveDomainOverrides(host))[key];
   if (typeof override === "string" && override.length > 0) return override;
   return configManager.get<string>(key, fallback);
 }
@@ -58,10 +51,7 @@ async function brandedValue(key: BrandingOverrideKey, fallback: string): Promise
  */
 async function hasExplicitThemeColor(): Promise<boolean> {
   const host = pickRequestHost(await headers());
-  const override = matchDomainBranding(
-    host,
-    parseDomainBranding(configManager.get<unknown>("domainBranding", [])),
-  ).pwaThemeColor;
+  const override = (await resolveDomainOverrides(host)).pwaThemeColor;
   if (typeof override === "string" && override.length > 0) return true;
   return configManager.getAllWithSources().pwaThemeColor?.source !== "default";
 }

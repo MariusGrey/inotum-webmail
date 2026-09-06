@@ -1,12 +1,8 @@
 import type { MetadataRoute } from "next";
 import { headers } from "next/headers";
 import { configManager } from "@/lib/admin/config-manager";
-import {
-  matchDomainBranding,
-  parseDomainBranding,
-  pickRequestHost,
-  type BrandingOverrideKey,
-} from "@/lib/admin/domain-branding";
+import { pickRequestHost, type BrandingOverrideKey } from "@/lib/admin/domain-branding";
+import { resolveDomainOverrides } from "@/lib/inotum/resolve-branding";
 
 export const dynamic = "force-dynamic";
 
@@ -33,10 +29,7 @@ export default async function manifest(): Promise<ExtendedManifest> {
   await configManager.ensureLoaded();
 
   const host = pickRequestHost(await headers());
-  const domainOverrides = matchDomainBranding(
-    host,
-    parseDomainBranding(configManager.get<unknown>("domainBranding", [])),
-  );
+  const domainOverrides = await resolveDomainOverrides(host);
   const branded = <T,>(key: BrandingOverrideKey, fallback: T): T => {
     const override = domainOverrides[key];
     if (typeof override === "string" && override.length > 0) return override as T;

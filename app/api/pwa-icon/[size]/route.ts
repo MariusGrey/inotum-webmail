@@ -2,11 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import sharp from 'sharp';
 import { configManager } from '@/lib/admin/config-manager';
 import { fetchBrandingAsset } from '@/lib/admin/branding-asset';
-import {
-  matchDomainBranding,
-  parseDomainBranding,
-  pickRequestHost,
-} from '@/lib/admin/domain-branding';
+import { pickRequestHost } from '@/lib/admin/domain-branding';
+import { resolveDomainOverrides } from '@/lib/inotum/resolve-branding';
 
 const VALID_SIZES = new Set([192, 512]);
 
@@ -27,10 +24,7 @@ export async function GET(
 
   await configManager.ensureLoaded();
   const host = pickRequestHost(req);
-  const domainOverrides = matchDomainBranding(
-    host,
-    parseDomainBranding(configManager.get<unknown>('domainBranding', [])),
-  );
+  const domainOverrides = await resolveDomainOverrides(host);
   const sources = configManager.getAllWithSources();
   const iconUrl =
     domainOverrides.pwaIconUrl ||

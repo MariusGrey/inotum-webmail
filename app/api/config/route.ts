@@ -4,12 +4,8 @@ import { configManager } from '@/lib/admin/config-manager';
 import { parseJmapServers, redactJmapServers } from '@/lib/admin/jmap-servers';
 import { hasSessionSecret } from '@/lib/auth/session-secret';
 import { getOauthScopes } from '@/lib/oauth/tokens';
-import {
-  matchDomainBranding,
-  parseDomainBranding,
-  pickRequestHost,
-  type BrandingOverrideKey,
-} from '@/lib/admin/domain-branding';
+import { pickRequestHost, type BrandingOverrideKey } from '@/lib/admin/domain-branding';
+import { resolveDomainOverrides } from '@/lib/inotum/resolve-branding';
 
 /**
  * Runtime configuration endpoint
@@ -30,10 +26,8 @@ export async function GET(request: NextRequest) {
   await configManager.ensureLoaded();
 
   const host = pickRequestHost(request);
-  const domainOverrides = matchDomainBranding(
-    host,
-    parseDomainBranding(configManager.get<unknown>('domainBranding', [])),
-  );
+  // Inotum: DOMAIN_BRANDING sopra il logo del dominio Stalwart (console)
+  const domainOverrides = await resolveDomainOverrides(host);
 
   // Per-domain override wins over the global value, but only when the
   // entry explicitly sets that key. Otherwise we fall through to the
